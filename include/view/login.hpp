@@ -36,6 +36,7 @@ private:
                       "<child>"
                       "<object class=\"GtkButton\" id=\"circular-plus\">"
                       "<property name=\"label\">&gt;</property>"
+                      "<property name=\"icon-name\">go-next-symbolic</property>"
                       "<style>"
                       "<class name=\"circular\"/>"
                       "<class name=\"opaque\"/>"

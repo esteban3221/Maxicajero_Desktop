@@ -23,6 +23,7 @@ set(SOURCES
 
     src/view/login.cpp
     src/view/main_window.cpp
+    src/view/header_bar.cpp
 
 )
 
