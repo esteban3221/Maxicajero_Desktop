@@ -1,0 +1,146 @@
+using Gtk 4.0;
+using Adw 1;
+
+Box {
+  orientation: vertical;
+  halign: center;
+  valign: center;
+  spacing: 10;
+
+  Label {
+    label: _("Configuración general");
+    halign: start;
+
+    styles [
+      "title-3",
+    ]
+  }
+
+  // Separator {}
+  Label {
+    label: _("Visulización");
+    halign: start;
+
+    styles [
+      "title-4",
+    ]
+  }
+
+  Separator {}
+
+  CheckButton checkbox_1 {
+    active: true;
+    label: _("Iniciar CashDro.exe miimizado");
+  }
+
+  CheckButton checkbox_2 {
+    active: true;
+    label: _("Visualizar y validar por pantalla cambios no disponibles");
+  }
+
+  CheckButton checkbox_3 {
+    active: true;
+    label: _("Validar por pantalla el inicio de las retiradas de efectivo");
+  }
+
+  CheckButton checkbox_4 {
+    active: true;
+    label: _("Mostrar barra de alertas de efectivo");
+  }
+
+  Label {
+    label: _("Operaciones en efectivo");
+    halign: start;
+
+    styles [
+      "title-4",
+    ]
+  }
+
+  Separator {}
+
+  CheckButton checkbox_5 {
+    active: true;
+    label: _("Redondear cambio a favor del cliente");
+  }
+
+  CheckButton checkbox_6 {
+    active: true;
+    label: _("Al introducir un billete controlar su posible devolución");
+  }
+
+  CheckButton checkbox_7 {
+    active: true;
+    label: _("Poder finalizar cualquier operación");
+  }
+
+  Grid {
+    margin-start: 10;
+    margin-end: 10;
+    margin-top: 10;
+    margin-bottom: 10;
+    row-spacing: 15;
+    column-spacing: 10;
+
+    Label {
+      label: _('No permitir pagos superiores a       ');
+
+      layout {
+        row: '0';
+        column: '0';
+      }
+    }
+
+    Entry etyFila1 {
+      editable: false;
+
+      layout {
+        row: '0';
+        column: '1';
+      }
+
+      styles [
+        "title-4",
+      ]
+    }
+
+    Label {
+      label: "Gestión de niveles y enrutamientos";
+
+      layout {
+        row: '1';
+        column: '0';
+      }
+    }
+
+    CheckButton checkbox_8 {
+      active: true;
+      label: _("Manual");
+
+      layout {
+        row: '1';
+        column: '1';
+      }
+    }
+
+    CheckButton checkbox_9 {
+      active: true;
+      label: _("Automático");
+
+      layout {
+        row: '1';
+        column: '2';
+      }
+    }
+  }
+
+  CheckButton checkbox_10 {
+    active: true;
+    label: _("Mostrar barra de alertas de efectivo");
+
+    layout {
+      row: '2';
+      column: '0';
+    }
+  }
+}

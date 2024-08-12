@@ -1,0 +1,10 @@
+[re/sonny/Workbench]
+code-language=3
+name='Componente superior entrada de dinero'
+show-code=false
+show-preview=true
+show-style=false
+show-ui=true
+show-console=true
+edited=true
+user-interface-language='blueprint'

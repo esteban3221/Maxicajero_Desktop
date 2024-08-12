@@ -1,0 +1,88 @@
+using Gtk 4.0;
+
+Box {
+  halign: center;
+  valign: center;
+
+  Frame {
+    Grid {
+      margin-start: 10;
+      margin-end: 10;
+      margin-top: 10;
+      margin-bottom: 10;
+      row-spacing: 10;
+      column-spacing: 10;
+
+      Label {
+        label: _('Fila 1');
+        margin-bottom: 12;
+
+        layout {
+          row: '0';
+          column: '0';
+        }
+      }
+
+      Entry etyFila1 {
+        editable: false;
+
+        layout {
+          row: '1';
+          column: '0';
+        }
+
+        styles [
+          "title-4",
+        ]
+      }
+
+      Label {
+        label: _('Fila 2');
+        margin-bottom: 12;
+
+        layout {
+          row: '0';
+          column: '1';
+        }
+      }
+
+      Entry etyFila2 {
+        editable: false;
+
+        layout {
+          row: '1';
+          column: '1';
+        }
+
+        styles [
+          "title-4",
+        ]
+      }
+
+      Label {
+        label: _('Fila 3');
+        margin-bottom: 12;
+
+        layout {
+          row: '0';
+          column: '2';
+        }
+      }
+
+      Entry etyFila3 {
+        layout {
+          row: '1';
+          column: '2';
+        }
+
+        styles [
+          "title-4",
+        ]
+      }
+
+      styles [
+        "title-1",
+      ]
+    }
+  }
+}

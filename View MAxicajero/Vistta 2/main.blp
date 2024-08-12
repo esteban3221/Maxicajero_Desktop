@@ -1,0 +1,231 @@
+using Gtk 4.0;
+
+Box {
+  spacing: 20;
+  halign: center;
+  valign: center;
+
+  Box {
+    orientation: vertical;
+    spacing: 20;
+
+    Frame {
+      Box {
+        margin-start: 12;
+        margin-end: 12;
+        orientation: vertical;
+
+        Label {
+          label: 'Reciclador de Monedas';
+
+          styles [
+            "title-1"
+          ]
+        }
+
+        Box {
+          halign: end;
+          orientation: vertical;
+
+          Label {
+            label: 'Total';
+
+            styles [
+              "title-2"
+            ]
+          }
+
+          Label {
+            label: '0.00 MXN';
+
+            styles [
+              "title-4"
+            ]
+          }
+
+          Label {
+            label: 'Total';
+
+            styles [
+              "title-2"
+            ]
+          }
+
+          Label {
+            label: '100';
+
+            styles [
+              "title-4"
+            ]
+          }
+        }
+      }
+    }
+
+    Frame {
+      Box {
+        margin-start: 12;
+        margin-end: 12;
+        orientation: vertical;
+
+        Label {
+          label: 'Reciclador de Billetes';
+
+          styles [
+            "title-1"
+          ]
+        }
+
+        Box {
+          margin-top: 12;
+          margin-bottom: 12;
+          spacing: 10;
+
+          TreeView {
+            hexpand: true;
+          }
+
+          Box {
+            halign: end;
+            orientation: vertical;
+
+            Label {
+              label: 'Total';
+
+              styles [
+                "title-2"
+              ]
+            }
+
+            Label {
+              label: '0.00 MXN';
+
+              styles [
+                "title-4"
+              ]
+            }
+
+            Label {
+              label: 'Total';
+
+              styles [
+                "title-2"
+              ]
+            }
+
+            Label {
+              label: '100';
+
+              styles [
+                "title-4"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // ============ Segunda Fila =============
+  Box {
+    spacing: 20;
+    orientation: vertical;
+
+    Frame {
+      Box {
+        margin-start: 12;
+        margin-end: 12;
+        orientation: vertical;
+
+        Label {
+          label: 'Total';
+
+          styles [
+            "title-1"
+          ]
+        }
+
+        Label {
+          label: '8,410.00 MXN';
+
+          styles [
+            "title-2"
+          ]
+        }
+      }
+    }
+
+    Frame {
+      Box {
+        margin-start: 12;
+        margin-end: 12;
+        orientation: vertical;
+
+        Label {
+          label: 'Total';
+
+          styles [
+            "title-1"
+          ]
+        }
+
+        Label {
+          label: '8,410.00 MXN';
+
+          styles [
+            "title-2"
+          ]
+        }
+      }
+    }
+
+    Frame {
+      Box {
+        margin-start: 12;
+        margin-end: 12;
+        orientation: vertical;
+
+        Label {
+          label: 'Total';
+
+          styles [
+            "title-1"
+          ]
+        }
+
+        Label {
+          label: '8,410.00 MXN';
+
+          styles [
+            "title-2"
+          ]
+        }
+      }
+    }
+
+    Frame {
+      // margin-bottom: 12;
+      Box {
+        margin-start: 12;
+        margin-end: 12;
+        orientation: vertical;
+
+        Label {
+          label: 'Casette de Billetes';
+
+          styles [
+            "title-1"
+          ]
+        }
+
+        Label {
+          label: '8,410.00 MXN';
+
+          styles [
+            "title-2"
+          ]
+        }
+      }
+    }
+  }
+}
