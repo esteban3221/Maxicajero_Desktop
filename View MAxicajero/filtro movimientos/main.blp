@@ -1,0 +1,230 @@
+using Gtk 4.0;
+
+Box {
+  spacing: 15;
+  orientation: vertical;
+
+  Label {
+  margin-start: 150;
+    halign: start;
+    label: 'Fecha';
+
+    styles [
+      "title-2",
+    ]
+  }
+
+  ListBox {
+    selection-mode: none;
+    margin-start: 150;
+    margin-end: 150;
+
+    ListBoxRow {
+      Box {
+        Box {
+          hexpand: true;
+          halign: start;
+
+          Label {
+            label: 'Fecha Inicio';
+          }
+
+          Entry {
+            margin-start: 10;
+            valign: center;
+          }
+
+          Button {
+            valign: center;
+            icon-name: 'month-symbolic';
+          }
+        }
+
+        Box {
+          halign: start;
+
+          Label {
+            label: 'Hora Inicio';
+          }
+
+          Entry {
+            margin-start: 10;
+            valign: center;
+          }
+
+          Button {
+            valign: center;
+            icon-name: 'month-symbolic';
+          }
+        }
+      }
+    }
+
+    ListBoxRow {
+      Box {
+        Box {
+          hexpand: true;
+          halign: start;
+
+          Label {
+            label: 'Fecha Fin    ';
+          }
+
+          Entry {
+            margin-start: 10;
+            valign: center;
+          }
+
+          Button {
+            valign: center;
+            icon-name: 'month-symbolic';
+          }
+        }
+
+        Box {
+          halign: start;
+
+          Label {
+            label: 'Hora Fin';
+          }
+
+          Entry {
+            margin-start: 10;
+            valign: center;
+          }
+
+          Button {
+            valign: center;
+            icon-name: 'month-symbolic';
+          }
+        }
+      }
+    }
+
+    ListBoxRow {
+      Box {
+        Label {
+          halign: start;
+          hexpand: true;
+          label: 'Usuario';
+        }
+
+        DropDown drop_down {
+          enable-search: true;
+        }
+      }
+    }
+
+    styles [
+      "boxed-list",
+      "rich-list",
+    ]
+  }
+
+  Label {
+  margin-top: 10;
+  margin-start: 150;
+    halign: start;
+    label: 'Tipo';
+
+    styles [
+      "title-2",
+    ]
+  }
+
+  Frame {
+    margin-start: 150;
+    margin-end: 150;
+
+    Box {
+    margin-start: 10;
+    margin-end: 10;
+    margin-top: 10;
+    margin-bottom: 10;
+    homogeneous : true;
+    
+      orientation: horizontal;
+
+      Box {
+        orientation: vertical;
+        CheckButton checkbox_0 {
+          label: _('Venta');
+        }
+        CheckButton checkbox_1 {
+          label: _('Pago');
+        }
+        CheckButton checkbox_2 {
+          label: _('Dar Cambio');
+        }
+        CheckButton checkbox_3 {
+          label: _('Carga');
+        }
+        CheckButton checkbox_4 {
+          label: _('Ingreso');
+        }
+        CheckButton checkbox_5 {
+          label: _('Ingreso Importe');
+        }
+        CheckButton checkbox_6 {
+          label: _('Retirada');
+        }
+      }
+      
+      Box {
+        orientation: vertical;
+        CheckButton checkbox_7 {
+          label: _('Retiada casete');
+        }
+        CheckButton checkbox_8 {
+          label: _('Venta Pendiente');
+        }
+        CheckButton checkbox_9 {
+          label: _('Cancelacion no devuelta');
+        }
+        CheckButton checkbox_10 {
+          label: _('Pago cambio no disponible');
+        }
+        CheckButton checkbox_11 {
+          label: _('Cambio dispositivo');
+        }
+        CheckButton checkbox_12 {
+          label: _('Cierre');
+        }
+
+      }
+      
+      Box {
+        orientation: vertical;
+        
+        Button {
+        label : 'Todos';
+        halign : center;
+        valign : center;
+        styles ["flat"]
+        }
+        
+        Button {
+        label : 'Ninguno';
+        halign : center;
+        valign : center;
+        styles ["flat"]
+        }
+
+      }
+    }
+  }
+  
+  Box{
+  halign : center;
+  spacing :20;
+  Button{
+  label : 'Aceptar';
+  styles [
+          "suggested-action",
+        ]
+  }
+  Button{
+  label : 'Cancelar';
+  }
+  }
+}

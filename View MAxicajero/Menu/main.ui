@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <object class="GtkBox">
+    <property name="margin-bottom">10</property>
+    <property name="margin-start">10</property>
+    <property name="margin-end">10</property>
+    <property name="margin-top">10</property>
+    <child>
+      <object class="GtkScrolledWindow" id="scrolled_window">
+        <property name="propagate-natural-width">true</property>
+        <child>
+          <object class="GtkListBox">
+            <property name="valign">1</property>
+            <property name="activate-on-single-click">true</property>
+            <property name="selection-mode">1</property>
+            <child>
+              <object class="GtkBox">
+                <property name="spacing">10</property>
+                <child>
+                  <object class="GtkImage">
+                    <property name="icon-name">money-symbolic</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="label">Venta</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox">
+                <property name="spacing">10</property>
+                <child>
+                  <object class="GtkImage">
+                    <property name="icon-name">coin-symbolic</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="label">Pago</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox">
+                <property name="spacing">10</property>
+                <child>
+                  <object class="GtkImage">
+                    <property name="icon-name">resources-symbolic</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="label">Consulta de Efectivo</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox">
+                <property name="spacing">10</property>
+                <child>
+                  <object class="GtkImage">
+                    <property name="icon-name">resources-symbolic</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="label">Carga / Refill</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <style>
+              <class name="navigation-sidebar"/>
+            </style>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="GtkStack">
+        <property name="hexpand">true</property>
+      </object>
+    </child>
+  </object>
+</interface>

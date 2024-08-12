@@ -1,0 +1,55 @@
+using Gtk 4.0;
+
+Box boxLogin {
+  orientation: vertical;
+  margin-bottom: 10;
+  margin-start: 10;
+  margin-end: 10;
+  margin-top: 10;
+
+  Label {
+    label: 'MaxiCajero';
+
+    styles [
+      "title-1",
+    ]
+  }
+
+  Box {
+    valign: center;
+    halign: center;
+    orientation: vertical;
+    hexpand: true;
+    vexpand: true;
+
+    Image {
+      icon-name: 'system-users-symbolic';
+      pixel-size: 150;
+    }
+
+    Box {
+      spacing: 5;
+      margin-top: 25;
+
+      PasswordEntry {
+        margin-top: 10;
+      }
+
+      Button circular-plus {
+        valign: end;
+        label: '>';
+
+        styles [
+          "circular",
+          "opaque",
+        ]
+      }
+    }
+  }
+
+  Label {
+    label: 'MaxiCajero Desktop 1.0';
+    valign: end;
+    halign: end;
+  }
+}

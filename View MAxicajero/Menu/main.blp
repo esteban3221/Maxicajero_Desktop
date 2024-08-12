@@ -1,0 +1,228 @@
+using Gtk 4.0;
+
+Box {
+  margin-bottom: 10;
+  margin-start: 10;
+  margin-end: 10;
+  margin-top: 10;
+
+  Box {
+    spacing: 10;
+    orientation: vertical;
+
+    Button flat {
+      //
+      //
+      
+      child : Box{
+      Image {icon-name: 'system-log-out-symbolic';}
+      spacing: 10;
+      Label {label: _("Cerrar Sesion");}
+      };
+      styles [
+        "flat",
+      ]
+    }
+
+    Separator {}
+
+    ScrolledWindow scrolled_window {
+      propagate-natural-width: true;
+      vexpand: true;
+
+      ListBox {
+        valign: start;
+        activate-on-single-click: true;
+        selection-mode: single;
+
+        Box {
+          spacing: 10;
+
+          Image {
+            icon-name: 'money-symbolic';
+          }
+
+          Label {
+            label: 'Venta';
+          }
+        }
+
+        Box {
+          spacing: 10;
+
+          Image {
+            icon-name: 'coin-symbolic';
+          }
+
+          Label {
+            label: 'Pago';
+          }
+        }
+
+        Box {
+          spacing: 10;
+
+          Image {
+            icon-name: 'resources-symbolic';
+          }
+
+          Label {
+            label: 'Consulta de Efectivo';
+          }
+        }
+
+        Box {
+          spacing: 10;
+
+          Image {
+            icon-name: 'resources-symbolic';
+          }
+
+          Label {
+            label: 'Carga / Refill';
+          }
+        }
+
+        Box {
+          spacing: 10;
+
+          Image {
+            icon-name: 'resources-symbolic';
+          }
+
+          Label {
+            label: 'Retirada';
+          }
+        }
+
+        Box {
+          spacing: 10;
+
+          Image {
+            icon-name: 'resources-symbolic';
+          }
+
+          Label {
+            label: 'Conslta movimientos';
+          }
+        }
+
+        Box {
+          spacing: 10;
+
+          Image {
+            icon-name: 'resources-symbolic';
+          }
+
+          Label {
+            label: 'Traspasar a casete';
+          }
+        }
+
+        Box {
+          spacing: 10;
+
+          Image {
+            icon-name: 'resources-symbolic';
+          }
+
+          Label {
+            label: 'Ingreso por importe';
+          }
+        }
+
+        Box {
+          spacing: 10;
+
+          Image {
+            icon-name: 'resources-symbolic';
+          }
+
+          Label {
+            label: 'Cierre con faltantes';
+          }
+        }
+
+        Box {
+          spacing: 10;
+
+          Image {
+            icon-name: 'resources-symbolic';
+          }
+
+          Label {
+            label: 'Fianza';
+          }
+        }
+
+        Box {
+          spacing: 10;
+
+          Image {
+            icon-name: 'resources-symbolic';
+          }
+
+          Label {
+            label: 'Cambio manual';
+          }
+        }
+
+        Box {
+          spacing: 10;
+
+          Image {
+            icon-name: 'resources-symbolic';
+          }
+
+          Label {
+            label: 'Estadisticas';
+          }
+        }
+
+        Box {
+          spacing: 10;
+
+          Image {
+            icon-name: 'resources-symbolic';
+          }
+
+          Label {
+            label: 'Ajuste niveles';
+          }
+        }
+
+        Box {
+          spacing: 10;
+
+          Image {
+            icon-name: 'resources-symbolic';
+          }
+
+          Label {
+            label: 'Cambio  automatica';
+          }
+        }
+
+        Box {
+          spacing: 10;
+
+          Image {
+            icon-name: 'resources-symbolic';
+          }
+
+          Label {
+            label: 'Configuracion';
+          }
+        }
+
+        styles [
+          "navigation-sidebar",
+        ]
+      }
+    }
+  }
+
+  Stack {
+    hexpand: true;
+  }
+}

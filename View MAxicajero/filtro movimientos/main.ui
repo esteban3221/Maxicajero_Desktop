@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <object class="GtkBox">
+    <property name="spacing">15</property>
+    <property name="orientation">1</property>
+    <child>
+      <object class="GtkLabel">
+        <property name="halign">1</property>
+        <property name="label">Fecha</property>
+        <style>
+          <class name="title-2"/>
+        </style>
+      </object>
+    </child>
+    <child>
+      <object class="GtkListBox">
+        <property name="selection-mode">0</property>
+        <property name="margin-start">150</property>
+        <property name="margin-end">150</property>
+        <child>
+          <object class="GtkListBoxRow">
+            <child>
+              <object class="GtkBox">
+                <child>
+                  <object class="GtkBox">
+                    <property name="hexpand">true</property>
+                    <property name="halign">1</property>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="label">Fecha Inicio</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkEntry">
+                        <property name="margin-start">10</property>
+                        <property name="valign">3</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkButton">
+                        <property name="valign">3</property>
+                        <property name="icon-name">month-symbolic</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="halign">1</property>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="label">Hora Inicio</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkEntry">
+                        <property name="margin-start">10</property>
+                        <property name="valign">3</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkButton">
+                        <property name="valign">3</property>
+                        <property name="icon-name">month-symbolic</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkListBoxRow">
+            <child>
+              <object class="GtkBox">
+                <child>
+                  <object class="GtkBox">
+                    <property name="hexpand">true</property>
+                    <property name="halign">1</property>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="label">Fecha Fin    </property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkEntry">
+                        <property name="margin-start">10</property>
+                        <property name="valign">3</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkButton">
+                        <property name="valign">3</property>
+                        <property name="icon-name">month-symbolic</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="halign">1</property>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="label">Hora Fin</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkEntry">
+                        <property name="margin-start">10</property>
+                        <property name="valign">3</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkButton">
+                        <property name="valign">3</property>
+                        <property name="icon-name">month-symbolic</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkListBoxRow">
+            <child>
+              <object class="GtkBox">
+                <child>
+                  <object class="GtkLabel">
+                    <property name="halign">1</property>
+                    <property name="hexpand">true</property>
+                    <property name="label">Usuario</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkDropDown" id="drop_down">
+                    <property name="enable-search">true</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <style>
+          <class name="boxed-list"/>
+          <class name="rich-list"/>
+        </style>
+      </object>
+    </child>
+    <child>
+      <object class="GtkLabel">
+        <property name="halign">1</property>
+        <property name="label">Tipo</property>
+        <style>
+          <class name="title-2"/>
+        </style>
+      </object>
+    </child>
+    <child>
+      <object class="GtkFrame">
+        <property name="margin-start">150</property>
+        <property name="margin-end">150</property>
+        <child>
+          <object class="GtkBox">
+            <property name="orientation">0</property>
+            <child>
+              <object class="GtkBox">
+                <child>
+                  <object class="GtkCheckButton" id="checkbox_0">
+                    <property name="label" translatable="true">Auto-Save Changes</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

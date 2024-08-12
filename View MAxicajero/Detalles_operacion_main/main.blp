@@ -1,0 +1,57 @@
+using Gtk 4.0;
+
+Box {
+  orientation: vertical;
+  spacing: 10;
+
+  Box {
+    margin-start: 10;
+    spacing: 10;
+
+    Button {
+      child: Box {
+        spacing: 10;
+
+        Image {
+          icon-name: 'funnel-outline-symbolic';
+        }
+
+        Label {
+          label: 'Detalles';
+        }
+      };
+      styles [
+        "flat"
+      ]
+    }
+
+    Button {
+      child: Box {
+        spacing: 10;
+
+        Image {
+          icon-name: 'funnel-outline-symbolic';
+        }
+
+        Label {
+          label: 'Filtro';
+        }
+      };
+
+      styles [
+        "flat"
+      ]
+    }
+
+    styles [
+      "sidebar-pane"
+    ]
+  }
+
+  ScrolledWindow {
+    hexpand: true;
+    vexpand: true;
+
+    TreeView {}
+  }
+}

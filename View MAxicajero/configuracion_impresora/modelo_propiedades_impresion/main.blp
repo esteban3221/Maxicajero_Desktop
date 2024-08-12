@@ -1,0 +1,220 @@
+using Gtk 4.0;            
+            Box {
+              margin-bottom: 30;
+              margin-end: 10;
+              margin-start: 10;
+              orientation: vertical;
+
+              Label {
+                label: 'Activar';
+                margin-bottom: 10;
+                xalign: 0;
+
+                styles [
+                  "title-2",
+                ]
+              }
+
+              ListBox list_config {
+                selection-mode: none;
+                margin-bottom: 30;
+
+                ListBoxRow {
+                  Box {
+                    Label entry_label_activar {
+                      halign: start;
+                      hexpand: true;
+                      label: 'Activar Impresión';
+                      valign: center;
+                      xalign: 0;
+                    }
+
+                    Switch switch_impresion {
+                      halign: end;
+                      valign: center;
+                    }
+                  }
+                }
+
+                styles [
+                  "rich-list",
+                  "boxed-list",
+                ]
+              }
+
+              Label {
+                label: 'Visualización';
+                margin-bottom: 10;
+                xalign: 0;
+
+                styles [
+                  "title-2",
+                ]
+              }
+
+              ListBox list_config_visualizacion {
+                selection-mode: none;
+
+                ListBoxRow {
+                  Box {
+                    Label switch_label {
+                      halign: start;
+                      hexpand: true;
+                      label: 'Mensaje de Agradecimiento';
+                      valign: center;
+                      xalign: 0;
+                    }
+
+                    CheckButton check_config_1 {
+                      active: true;
+                      halign: end;
+                      margin-end: 10;
+                      margin-start: 10;
+                      valign: center;
+                    }
+                  }
+                }
+
+                ListBoxRow {
+                  Box {
+                    Label check_label {
+                      halign: start;
+                      hexpand: true;
+                      label: 'Fecha';
+                      valign: center;
+                      xalign: 0;
+                    }
+
+                    CheckButton check_config_2 {
+                      active: true;
+                      halign: end;
+                      margin-end: 10;
+                      margin-start: 10;
+                      valign: center;
+                    }
+                  }
+                }
+
+                ListBoxRow {
+                  Box {
+                    Label check_label_2 {
+                      halign: start;
+                      hexpand: true;
+                      label: 'Direccion';
+                      valign: center;
+                      xalign: 0;
+                    }
+
+                    CheckButton check_config_3 {
+                      active: true;
+                      halign: end;
+                      margin-end: 10;
+                      margin-start: 10;
+                      valign: center;
+                    }
+                  }
+                }
+
+                ListBoxRow {
+                  Box {
+                    Label check_label_3 {
+                      halign: start;
+                      hexpand: true;
+                      label: 'RFC';
+                      valign: center;
+                      xalign: 0;
+                    }
+
+                    CheckButton check_config_4 {
+                      active: true;
+                      halign: end;
+                      margin-end: 10;
+                      margin-start: 10;
+                      valign: center;
+                    }
+                  }
+                }
+
+                ListBoxRow {
+                  Box {
+                    Label check_label_4 {
+                      halign: start;
+                      hexpand: true;
+                      label: 'Vendedor';
+                      valign: center;
+                      xalign: 0;
+                    }
+
+                    CheckButton check_config_5 {
+                      active: true;
+                      halign: end;
+                      margin-end: 10;
+                      margin-start: 10;
+                      valign: center;
+                    }
+                  }
+                }
+
+                ListBoxRow {
+                  Box {
+                    Label check_label_5 {
+                      halign: start;
+                      hexpand: true;
+                      label: 'Contacto';
+                      valign: center;
+                      xalign: 0;
+                    }
+
+                    CheckButton check_config_6 {
+                      active: true;
+                      halign: end;
+                      margin-end: 10;
+                      margin-start: 10;
+                      valign: center;
+                    }
+                  }
+                }
+
+                styles [
+                  "rich-list",
+                  "boxed-list",
+                ]
+              }
+
+              Label {
+                label: 'Test';
+                margin-bottom: 10;
+                margin-top: 30;
+                xalign: 0;
+
+                styles [
+                  "title-2",
+                ]
+              }
+
+              ListBox list_config_test {
+                selection-mode: none;
+
+                ListBoxRow {
+                  Box {
+                    Label entry_label_8 {
+                      halign: start;
+                      hexpand: true;
+                      label: 'Impresion de Prueba';
+                      valign: center;
+                      xalign: 0;
+                    }
+
+                    Image {
+                      halign: end;
+                      icon-name: 'printer-symbolic';
+                    }
+                  }
+                }
+
+                styles [
+                  "rich-list",
+                  "boxed-list",
+                ]
+              }
+            }
