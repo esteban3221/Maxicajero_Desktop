@@ -13,13 +13,17 @@ set(SOURCES
     src/main.cpp
     src/view/login.cpp
     src/view/main_window.cpp
+
     src/view/header_bar.cpp
+    src/model/header_bar.cpp
+    src/controller/header_bar.cpp
 )
 
 include_directories(include 
                     include/view/
                     include/model/
-                    include/controller/)
+                    include/controller/
+                    include/shared/)
 
 add_executable(Maxicajero ${SOURCES})
 

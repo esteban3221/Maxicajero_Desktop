@@ -1,17 +1,24 @@
 #pragma once
 #include <gtkmm.h>
 #include <iostream>
-class HeaderBarMain : public Gtk::HeaderBar
+
+namespace View
 {
-private:
-    Gtk::ToggleButton toggleShowIP;
-    Gtk::Popover popOverConfig;
+    class HeaderBarMain : public Gtk::HeaderBar
+    {
+    private:
+        Gtk::MenuButton menuShowIP;
+        Gtk::Popover popOverConfig;
 
-    const char *XML;
+        const char *XML;
 
-    Gtk::Box *boxConfguracionIP;
-    
-public:
-    HeaderBarMain(/* args */);
-    ~HeaderBarMain();
-};
+    protected:
+        Gtk::Box *boxConfguracionIP;
+        Gtk::Entry *etyDirectionServidor;
+        Gtk::ListBox *listIpSaves;
+
+    public:
+        HeaderBarMain(/* args */);
+        ~HeaderBarMain();
+    };
+} // namespace View

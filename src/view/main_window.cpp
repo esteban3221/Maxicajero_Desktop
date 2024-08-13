@@ -10,4 +10,3 @@ main_window::main_window(/* args */)
 main_window::~main_window()
 {
 }
-

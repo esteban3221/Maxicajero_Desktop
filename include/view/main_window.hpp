@@ -3,7 +3,7 @@
 #include <memory>
 
 #include "login.hpp"
-#include "header_bar.hpp"
+#include "controller/header_bar.hpp"
 
 
 class main_window : public Gtk::Window
@@ -11,7 +11,7 @@ class main_window : public Gtk::Window
 private:
     /* data */
     Login login;
-    std::unique_ptr<HeaderBarMain> header = std::make_unique<HeaderBarMain>();
+    std::unique_ptr<Controller::HeaderBarMain> header = std::make_unique<Controller::HeaderBarMain>();
 
 public:
     main_window(/* args */);
