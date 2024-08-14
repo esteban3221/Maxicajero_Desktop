@@ -11,8 +11,11 @@ pkg_check_modules(GTKMM gtkmm-4.0)
 
 set(SOURCES
     src/main.cpp
-    src/view/login.cpp
     src/view/main_window.cpp
+
+    src/view/login.cpp
+    src/model/login.cpp
+    src/controller/login.cpp
 
     src/view/header_bar.cpp
     src/model/header_bar.cpp

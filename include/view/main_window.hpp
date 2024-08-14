@@ -4,13 +4,15 @@
 
 #include "login.hpp"
 #include "controller/header_bar.hpp"
+#include "controller/login.hpp"
 
 
 class main_window : public Gtk::Window
 {
 private:
     /* data */
-    Login login;
+    Gtk::Stack stack;
+    Controller::Login login;
     std::unique_ptr<Controller::HeaderBarMain> header = std::make_unique<Controller::HeaderBarMain>();
 
 public:

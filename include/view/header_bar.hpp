@@ -1,6 +1,7 @@
 #pragma once
 #include <gtkmm.h>
 #include <iostream>
+#include "global.hpp"
 
 namespace View
 {

@@ -64,9 +64,9 @@ namespace Controller
                                            {
                                                finalizeConeccion(status);
                                                etyDirectionServidor->set_editable();
-                                               return false; // Detiene el timeout si la conexión es exitosa o el tiempo se agota
+                                               return false;
                                            }
-                                           return true; // Sigue intentando mientras queden segundos disponibles
+                                           return true; 
                                        },
                                        100);
     }
@@ -75,13 +75,13 @@ namespace Controller
     {
         
         etyDirectionServidor->set_editable(false);
-        asyncGui.dispatch_to_gui([this,remaining,total]
+        // asyncGui.dispatch_to_gui([this,remaining,total]
         
-                                 { 
+        //                          { 
                                     static double fraction = 0.0;
                                     fraction = 1.0 - static_cast<double>(remaining) / total;
                                     etyDirectionServidor->set_css_classes({"entry"});
-                                    etyDirectionServidor->set_progress_fraction(fraction); });
+                                    etyDirectionServidor->set_progress_fraction(fraction); 
     }
 
     void HeaderBarMain::finalizeConeccion(bool success)
@@ -98,6 +98,7 @@ namespace Controller
         {
             etyDirectionServidor->set_progress_fraction( 0.0 );
             etyDirectionServidor->set_css_classes({"success"});
+            Global::ipDirection = etyDirectionServidor->get_text();
             listIpSaves->prepend(*rowListIp(etyDirectionServidor->get_text()));
         }
         
