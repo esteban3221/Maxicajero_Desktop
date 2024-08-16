@@ -1,6 +1,6 @@
 using Gtk 4.0;
 
-Box {
+Box boxConfImpresora{
   spacing: 10;
   homogeneous: true;
 
@@ -28,8 +28,8 @@ Box {
     }
 
     ScrolledWindow {
-      ListBox {
-        ListBoxRow {
+      ListBox lstBoxPrint{
+        ListBoxRow lstBoxRowPrint{
           activatable: false;
 
           Label {
@@ -47,7 +47,7 @@ Box {
         ]
       }
     }
-  }
+  }  
 
   Box {
     orientation: vertical;
@@ -63,7 +63,7 @@ Box {
       ]
     }
 
-    Notebook {
+    Notebook ntbookPropiedades{
     vexpand:true;
       ScrolledWindow {
         Box {
@@ -82,13 +82,13 @@ Box {
             ]
           }
 
-          ListBox list_config {
+          ListBox lstBoxPage1{
             selection-mode: none;
             margin-bottom: 30;
 
             ListBoxRow {
               Box {
-                Label entry_label_activar {
+                Label lblActivar1 {
                   halign: start;
                   hexpand: true;
                   label: 'Activar Impresión';
@@ -96,7 +96,7 @@ Box {
                   xalign: 0;
                 }
 
-                Switch switch_impresion {
+                Switch switchImpresion {
                   halign: end;
                   valign: center;
                 }
@@ -119,12 +119,12 @@ Box {
             ]
           }
 
-          ListBox list_config_visualizacion {
+          ListBox lstBoxVisualizacion1 {
             selection-mode: none;
 
             ListBoxRow {
               Box {
-                Label {
+                Label lblMensaje1{
                   halign: start;
                   hexpand: true;
                   label: 'Mensaje de Agradecimiento';
@@ -142,9 +142,9 @@ Box {
               }
             }
 
-            ListBoxRow {
+            ListBoxRow{
               Box {
-                Label check_label {
+                Label lblFecha1 {
                   halign: start;
                   hexpand: true;
                   label: 'Fecha';
@@ -164,7 +164,7 @@ Box {
 
             ListBoxRow {
               Box {
-                Label check_label_2 {
+                Label lblDireccion1 {
                   halign: start;
                   hexpand: true;
                   label: 'Direccion';
@@ -184,7 +184,7 @@ Box {
 
             ListBoxRow {
               Box {
-                Label check_label_3 {
+                Label lblRFC1 {
                   halign: start;
                   hexpand: true;
                   label: 'RFC';
@@ -204,7 +204,7 @@ Box {
 
             ListBoxRow {
               Box {
-                Label check_label_4 {
+                Label lblVendedor1 {
                   halign: start;
                   hexpand: true;
                   label: 'Vendedor';
@@ -224,7 +224,7 @@ Box {
 
             ListBoxRow {
               Box {
-                Label check_label_5 {
+                Label lblContacto1 {
                   halign: start;
                   hexpand: true;
                   label: 'Contacto';
@@ -259,12 +259,12 @@ Box {
             ]
           }
 
-          ListBox list_config_test {
+          ListBox lstBoxTest1{
             selection-mode: none;
 
             ListBoxRow {
               Box {
-                Label entry_label_8 {
+                Label lblImpresionPrueba1 {
                   halign: start;
                   hexpand: true;
                   label: 'Impresion de Prueba';
@@ -304,13 +304,13 @@ Box {
             ]
           }
 
-          ListBox list_config_remote {
+          ListBox lstBoxPage2 {
             selection-mode: none;
             margin-bottom: 30;
 
             ListBoxRow {
               Box {
-                Label entry_label_activar_remote {
+                Label lblActivar2{
                   halign: start;
                   hexpand: true;
                   label: 'Activar Impresión';
@@ -341,7 +341,7 @@ Box {
             ]
           }
 
-          ListBox list_config_visualizacion_remote {
+          ListBox lstBoxVisualizacion2 {
             selection-mode: none;
 
             ListBoxRow {
@@ -386,7 +386,7 @@ Box {
 
             ListBoxRow {
               Box {
-                Label  {
+                Label  lblDireccion2{
                   halign: start;
                   hexpand: true;
                   label: 'Direccion';
@@ -406,7 +406,7 @@ Box {
 
             ListBoxRow {
               Box {
-                Label  {
+                Label  lblRFC2{
                   halign: start;
                   hexpand: true;
                   label: 'RFC';
@@ -426,7 +426,7 @@ Box {
 
             ListBoxRow {
               Box {
-                Label  {
+                Label  lblVendedor2{
                   halign: start;
                   hexpand: true;
                   label: 'Vendedor';
@@ -446,7 +446,7 @@ Box {
 
             ListBoxRow {
               Box {
-                Label {
+                Label lblContacto2{
                   halign: start;
                   hexpand: true;
                   label: 'Contacto';
@@ -470,7 +470,7 @@ Box {
             ]
           }
 
-          Label {
+          Label lblTest{
             label: 'Test';
             margin-bottom: 10;
             margin-top: 30;
@@ -481,12 +481,12 @@ Box {
             ]
           }
 
-          ListBox list_config_test_remote {
+          ListBox lstBoxTest2 {
             selection-mode: none;
 
             ListBoxRow {
               Box {
-                Label entry_label_8_remote {
+                Label lblImpresionPrueba {
                   halign: start;
                   hexpand: true;
                   label: 'Impresion de Prueba';

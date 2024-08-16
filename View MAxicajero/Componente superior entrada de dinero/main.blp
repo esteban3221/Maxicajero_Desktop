@@ -1,6 +1,6 @@
 using Gtk 4.0;
 
-Box {
+Box boxCompSuperior{
   halign: center;
   valign: center;
 
@@ -13,7 +13,7 @@ Box {
       row-spacing: 10;
       column-spacing: 10;
 
-      Label {
+      Label lblColum1{
         label: _('Fila 1');
         margin-bottom: 12;
 
@@ -23,7 +23,7 @@ Box {
         }
       }
 
-      Entry etyFila1 {
+      Entry etyColum1 {
         editable: false;
 
         layout {
@@ -36,7 +36,7 @@ Box {
         ]
       }
 
-      Label {
+      Label lblColum2{
         label: _('Fila 2');
         margin-bottom: 12;
 
@@ -46,7 +46,7 @@ Box {
         }
       }
 
-      Entry etyFila2 {
+      Entry etyColum2 {
         editable: false;
 
         layout {
@@ -59,7 +59,7 @@ Box {
         ]
       }
 
-      Label {
+      Label lblColum3{
         label: _('Fila 3');
         margin-bottom: 12;
 
@@ -69,7 +69,7 @@ Box {
         }
       }
 
-      Entry etyFila3 {
+      Entry etyColum3 {
         layout {
           row: '1';
           column: '2';

@@ -1,6 +1,6 @@
 using Gtk 4.0;
 
-Box {
+Box boxMovimientos{
   spacing: 15;
   orientation: vertical;
 
@@ -14,7 +14,7 @@ Box {
     ]
   }
 
-  ListBox {
+  ListBox lstBoxFecha{
     selection-mode: none;
     margin-start: 150;
     margin-end: 150;
@@ -25,16 +25,16 @@ Box {
           hexpand: true;
           halign: start;
 
-          Label {
+          Label lblFechaInicio{
             label: 'Fecha Inicio';
           }
 
-          Entry {
+          Entry etyFechaInicio{
             margin-start: 10;
             valign: center;
           }
 
-          Button {
+          Button btnFechaInicio{
             valign: center;
             icon-name: 'month-symbolic';
           }
@@ -43,16 +43,16 @@ Box {
         Box {
           halign: start;
 
-          Label {
+          Label lblHoraInicio{
             label: 'Hora Inicio';
           }
 
-          Entry {
+          Entry etyHoraInicio{
             margin-start: 10;
             valign: center;
           }
 
-          Button {
+          Button btnHoraInicio{
             valign: center;
             icon-name: 'month-symbolic';
           }
@@ -66,16 +66,16 @@ Box {
           hexpand: true;
           halign: start;
 
-          Label {
+          Label lblFechaFin{
             label: 'Fecha Fin    ';
           }
 
-          Entry {
+          Entry etyFechaFin{
             margin-start: 10;
             valign: center;
           }
 
-          Button {
+          Button btnFechaFin{
             valign: center;
             icon-name: 'month-symbolic';
           }
@@ -84,16 +84,16 @@ Box {
         Box {
           halign: start;
 
-          Label {
+          Label lblHoraFin{
             label: 'Hora Fin';
           }
 
-          Entry {
+          Entry etyHoraFin{
             margin-start: 10;
             valign: center;
           }
 
-          Button {
+          Button btnHoraFin{
             valign: center;
             icon-name: 'month-symbolic';
           }
@@ -103,13 +103,13 @@ Box {
 
     ListBoxRow {
       Box {
-        Label {
+        Label lblUsuario{
           halign: start;
           hexpand: true;
           label: 'Usuario';
         }
 
-        DropDown drop_down {
+        DropDown dropDownUsuario {
           enable-search: true;
         }
       }
@@ -147,47 +147,47 @@ Box {
 
       Box {
         orientation: vertical;
-        CheckButton checkbox_0 {
+        CheckButton checkbox0 {
           label: _('Venta');
         }
-        CheckButton checkbox_1 {
+        CheckButton checkbox1 {
           label: _('Pago');
         }
-        CheckButton checkbox_2 {
+        CheckButton checkbox2 {
           label: _('Dar Cambio');
         }
-        CheckButton checkbox_3 {
+        CheckButton checkbox3 {
           label: _('Carga');
         }
-        CheckButton checkbox_4 {
+        CheckButton checkbox4 {
           label: _('Ingreso');
         }
-        CheckButton checkbox_5 {
+        CheckButton checkbox5 {
           label: _('Ingreso Importe');
         }
-        CheckButton checkbox_6 {
+        CheckButton checkbox6 {
           label: _('Retirada');
         }
       }
       
       Box {
         orientation: vertical;
-        CheckButton checkbox_7 {
+        CheckButton checkbox7 {
           label: _('Retiada casete');
         }
-        CheckButton checkbox_8 {
+        CheckButton checkbox8 {
           label: _('Venta Pendiente');
         }
-        CheckButton checkbox_9 {
+        CheckButton checkbox9 {
           label: _('Cancelacion no devuelta');
         }
-        CheckButton checkbox_10 {
+        CheckButton checkbox10 {
           label: _('Pago cambio no disponible');
         }
-        CheckButton checkbox_11 {
+        CheckButton checkbox11 {
           label: _('Cambio dispositivo');
         }
-        CheckButton checkbox_12 {
+        CheckButton checkbox12 {
           label: _('Cierre');
         }
 
@@ -196,14 +196,14 @@ Box {
       Box {
         orientation: vertical;
         
-        Button {
+        Button btnTodos{
         label : 'Todos';
         halign : center;
         valign : center;
         styles ["flat"]
         }
         
-        Button {
+        Button btnNinguno{
         label : 'Ninguno';
         halign : center;
         valign : center;
@@ -217,13 +217,13 @@ Box {
   Box{
   halign : center;
   spacing :20;
-  Button{
+  Button btnAceptar{
   label : 'Aceptar';
   styles [
           "suggested-action",
         ]
   }
-  Button{
+  Button btnCancelar{
   label : 'Cancelar';
   }
   }

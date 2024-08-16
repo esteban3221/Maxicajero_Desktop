@@ -7,3 +7,6 @@ show-style=false
 show-ui=true
 show-console=true
 edited=true
+maximized=true
+width=1920
+height=1048
