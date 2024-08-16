@@ -28,8 +28,8 @@ Box boxConfImpresora{
     }
 
     ScrolledWindow {
-      ListBox lstBoxPrint{
-        ListBoxRow lstBoxRowPrint{
+      ListBox listBoxPrint{
+        ListBoxRow listBoxRowPrint{
           activatable: false;
 
           Label {
@@ -82,7 +82,7 @@ Box boxConfImpresora{
             ]
           }
 
-          ListBox lstBoxPage1{
+          ListBox listBoxPage1{
             selection-mode: none;
             margin-bottom: 30;
 
@@ -119,7 +119,7 @@ Box boxConfImpresora{
             ]
           }
 
-          ListBox lstBoxVisualizacion1 {
+          ListBox listBoxVisualizacion1 {
             selection-mode: none;
 
             ListBoxRow {
@@ -259,234 +259,12 @@ Box boxConfImpresora{
             ]
           }
 
-          ListBox lstBoxTest1{
+          ListBox listBoxTest1{
             selection-mode: none;
 
             ListBoxRow {
               Box {
                 Label lblImpresionPrueba1 {
-                  halign: start;
-                  hexpand: true;
-                  label: 'Impresion de Prueba';
-                  valign: center;
-                  xalign: 0;
-                }
-
-                Image {
-                  halign: end;
-                  icon-name: 'printer-symbolic';
-                }
-              }
-            }
-
-            styles [
-              "rich-list",
-              "boxed-list",
-            ]
-          }
-        }
-      }
-
-      ScrolledWindow {
-        Box {
-          margin-bottom: 30;
-          margin-end: 10;
-          margin-start: 10;
-          orientation: vertical;
-
-          Label {
-            label: 'Activar';
-            margin-bottom: 10;
-            xalign: 0;
-
-            styles [
-              "title-2",
-            ]
-          }
-
-          ListBox lstBoxPage2 {
-            selection-mode: none;
-            margin-bottom: 30;
-
-            ListBoxRow {
-              Box {
-                Label lblActivar2{
-                  halign: start;
-                  hexpand: true;
-                  label: 'Activar Impresión';
-                  valign: center;
-                  xalign: 0;
-                }
-
-                Switch switch_impresion_remote {
-                  halign: end;
-                  valign: center;
-                }
-              }
-            }
-
-            styles [
-              "rich-list",
-              "boxed-list",
-            ]
-          }
-
-          Label {
-            label: 'Visualización';
-            margin-bottom: 10;
-            xalign: 0;
-
-            styles [
-              "title-2",
-            ]
-          }
-
-          ListBox lstBoxVisualizacion2 {
-            selection-mode: none;
-
-            ListBoxRow {
-              Box {
-                Label {
-                  halign: start;
-                  hexpand: true;
-                  label: 'Mensaje de Agradecimiento';
-                  valign: center;
-                  xalign: 0;
-                }
-
-                CheckButton check_config_1_remote {
-                  active: true;
-                  halign: end;
-                  margin-end: 10;
-                  margin-start: 10;
-                  valign: center;
-                }
-              }
-            }
-
-            ListBoxRow {
-              Box {
-                Label  {
-                  halign: start;
-                  hexpand: true;
-                  label: 'Fecha';
-                  valign: center;
-                  xalign: 0;
-                }
-
-                CheckButton check_config_2_remote {
-                  active: true;
-                  halign: end;
-                  margin-end: 10;
-                  margin-start: 10;
-                  valign: center;
-                }
-              }
-            }
-
-            ListBoxRow {
-              Box {
-                Label  lblDireccion2{
-                  halign: start;
-                  hexpand: true;
-                  label: 'Direccion';
-                  valign: center;
-                  xalign: 0;
-                }
-
-                CheckButton check_config_3_remote {
-                  active: true;
-                  halign: end;
-                  margin-end: 10;
-                  margin-start: 10;
-                  valign: center;
-                }
-              }
-            }
-
-            ListBoxRow {
-              Box {
-                Label  lblRFC2{
-                  halign: start;
-                  hexpand: true;
-                  label: 'RFC';
-                  valign: center;
-                  xalign: 0;
-                }
-
-                CheckButton check_config_4_remote {
-                  active: true;
-                  halign: end;
-                  margin-end: 10;
-                  margin-start: 10;
-                  valign: center;
-                }
-              }
-            }
-
-            ListBoxRow {
-              Box {
-                Label  lblVendedor2{
-                  halign: start;
-                  hexpand: true;
-                  label: 'Vendedor';
-                  valign: center;
-                  xalign: 0;
-                }
-
-                CheckButton check_config_5_remote {
-                  active: true;
-                  halign: end;
-                  margin-end: 10;
-                  margin-start: 10;
-                  valign: center;
-                }
-              }
-            }
-
-            ListBoxRow {
-              Box {
-                Label lblContacto2{
-                  halign: start;
-                  hexpand: true;
-                  label: 'Contacto';
-                  valign: center;
-                  xalign: 0;
-                }
-
-                CheckButton check_config_6_remote {
-                  active: true;
-                  halign: end;
-                  margin-end: 10;
-                  margin-start: 10;
-                  valign: center;
-                }
-              }
-            }
-
-            styles [
-              "rich-list",
-              "boxed-list",
-            ]
-          }
-
-          Label lblTest{
-            label: 'Test';
-            margin-bottom: 10;
-            margin-top: 30;
-            xalign: 0;
-
-            styles [
-              "title-2",
-            ]
-          }
-
-          ListBox lstBoxTest2 {
-            selection-mode: none;
-
-            ListBoxRow {
-              Box {
-                Label lblImpresionPrueba {
                   halign: start;
                   hexpand: true;
                   label: 'Impresion de Prueba';
