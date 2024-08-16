@@ -50,12 +50,13 @@ namespace View
         this->etyDirectionServidor = builder->get_widget<Gtk::Entry>("etyDirectionServidor");
         //this->etyDirectionServidor->set_size_request(300, -1);
         this->popOverConfig.set_size_request(350, 400);
+        
+        Global::Widget::menuShowIP = new Gtk::MenuButton;
 
         this->popOverConfig.set_child(*boxConfguracionIP);
-        this->pack_start(menuShowIP);
-        menuShowIP.set_popover(popOverConfig);
-        menuShowIP.set_icon_name("applications-system-symbolic");
-        // toggleShowIP.set_css_classes({"flat"});
+        this->pack_start(*Global::Widget::menuShowIP);
+        Global::Widget::menuShowIP->set_popover(popOverConfig);
+        Global::Widget::menuShowIP->set_icon_name("applications-system-symbolic");
     }
 
     HeaderBarMain::~HeaderBarMain()

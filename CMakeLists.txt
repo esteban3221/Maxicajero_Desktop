@@ -8,10 +8,15 @@ find_package(cpr REQUIRED)
 find_package(nlohmann_json 3.2.0 REQUIRED)
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(GTKMM gtkmm-4.0)
+find_package(SQLite3 REQUIRED)
+find_library(SQLITE3_LIBRARY sqlite3 REQUIRED)
 
 set(SOURCES
     src/main.cpp
     src/view/main_window.cpp
+
+    src/db/sqlite.cpp
+    src/shared/global.cpp
 
     src/view/login.cpp
     src/model/login.cpp
@@ -26,13 +31,15 @@ include_directories(include
                     include/view/
                     include/model/
                     include/controller/
-                    include/shared/)
+                    include/shared/
+                    include/db/)
 
 add_executable(Maxicajero ${SOURCES})
 
 target_link_libraries(Maxicajero PRIVATE 
     cpr::cpr 
     nlohmann_json::nlohmann_json 
+    SQLite::SQLite3
     ${LIBNOTIFY_LIBRARIES} 
     ${GTKMM_LIBRARIES}
 )

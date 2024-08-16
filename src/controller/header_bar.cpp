@@ -3,7 +3,7 @@
 
 namespace Controller
 {
-    Gtk::ListBoxRow *HeaderBarMain::rowListIp(const std::string &label)
+    Gtk::ListBoxRow *HeaderBarMain::rowListIp(const std::string &id, const std::string &label)
     {
         auto row = new Gtk::ListBoxRow;
         auto box = new Gtk::Box;
@@ -19,9 +19,10 @@ namespace Controller
         labelPrincipal.set_hexpand();
         btnDel->set_halign(Gtk::Align::END);
 
-        btnDel->signal_clicked().connect([this,row](){
-            listIpSaves->remove(*row);
-        });
+        btnDel->signal_clicked().connect([this, row, id]()
+                                         {
+            removeIp(id);
+            listIpSaves->remove(*row); });
 
         row->set_child(*box);
 
@@ -35,6 +36,9 @@ namespace Controller
 
         // señales
         this->etyDirectionServidor->signal_activate().connect(sigc::mem_fun(*this, &HeaderBarMain::onActiveEntry));
+        this->listIpSaves->signal_row_activated().connect(sigc::mem_fun(*this, &HeaderBarMain::onIpRowActivated));
+        // init
+        initList();
     }
 
     HeaderBarMain::~HeaderBarMain()
@@ -50,38 +54,44 @@ namespace Controller
         auto start = std::chrono::steady_clock::now();
         auto end = start + timeout;
 
-        isCheckConeccion.store(true);
-
         Glib::signal_timeout().connect([this, start, end, timeout]() -> bool
                                        {
                                            auto now = std::chrono::steady_clock::now();
                                            auto remaining = std::chrono::duration_cast<std::chrono::seconds>(end - now).count();
                                            updateProgressIndicator(remaining, timeout.count());
-
                                            bool status = checkConeccion();
-
+                                            
                                            if (status || remaining <= 0)
                                            {
                                                finalizeConeccion(status);
                                                etyDirectionServidor->set_editable();
                                                return false;
                                            }
-                                           return true; 
-                                       },
-                                       100);
+                                           return true; }, 100);
+    }
+
+    void HeaderBarMain::onIpRowActivated(Gtk::ListBoxRow *row)
+    {
+        auto box = dynamic_cast<Gtk::Box *>(row->get_child());
+        if (box)
+        {
+            auto labelPrincipal = dynamic_cast<Gtk::Label *>(box->get_children().front());
+            Gtk::Button *btnDel = dynamic_cast<Gtk::Button *>(box->get_children().back());
+            etyDirectionServidor->set_text(labelPrincipal->get_text());
+            btnDel->activate();
+            listIpSaves->remove(*row);
+            onActiveEntry();
+        }
     }
 
     void HeaderBarMain::updateProgressIndicator(int remaining, int total)
     {
-        
+
         etyDirectionServidor->set_editable(false);
-        // asyncGui.dispatch_to_gui([this,remaining,total]
-        
-        //                          { 
-                                    static double fraction = 0.0;
-                                    fraction = 1.0 - static_cast<double>(remaining) / total;
-                                    etyDirectionServidor->set_css_classes({"entry"});
-                                    etyDirectionServidor->set_progress_fraction(fraction); 
+        static double fraction = 0.0;
+        fraction = 1.0 - static_cast<double>(remaining) / total;
+        etyDirectionServidor->set_css_classes({"entry"});
+        etyDirectionServidor->set_progress_fraction(fraction);
     }
 
     void HeaderBarMain::finalizeConeccion(bool success)
@@ -90,7 +100,7 @@ namespace Controller
                                  {
         if (!success) {
             etyDirectionServidor->set_placeholder_text("No se puede llegar al servidor.");
-            etyDirectionServidor->set_text("");
+            //etyDirectionServidor->set_text("");
             etyDirectionServidor->set_css_classes({"error"});
             etyDirectionServidor->set_progress_fraction( 1.0 );
         }
@@ -98,10 +108,11 @@ namespace Controller
         {
             etyDirectionServidor->set_progress_fraction( 0.0 );
             etyDirectionServidor->set_css_classes({"success"});
-            Global::ipDirection = etyDirectionServidor->get_text();
-            listIpSaves->prepend(*rowListIp(etyDirectionServidor->get_text()));
+            Global::Var::ipDirection = etyDirectionServidor->get_text();
+            auto ip = etyDirectionServidor->get_text();
+            listIpSaves->prepend(*rowListIp(addIp(ip),ip));
         }
-        
+        isinConeccion.store(false);
         isCheckConeccion.store(false); });
     }
 
@@ -109,6 +120,39 @@ namespace Controller
     {
         auto url = "http://" + etyDirectionServidor->get_text() + ":44333/testConexion";
         cpr::Response r = cpr::Get(cpr::Url{url});
-        return r.status_code == 200;
+        isinConeccion.store(r.status_code == 200);
+        return isinConeccion.load();
+    }
+
+    void HeaderBarMain::initList()
+    {
+        auto List = initData();
+
+        for (size_t i = 0; i < List["id"].size(); i++)
+        {
+            listIpSaves->prepend(*rowListIp(List["id"][i], List["ip"][i]));
+        }
+
+        auto row = listIpSaves->get_row_at_index(0);
+        if (row)
+        {
+            auto box = dynamic_cast<Gtk::Box *>(row->get_child());
+            if (box)
+            {
+                auto labelPrincipal = dynamic_cast<Gtk::Label *>(box->get_children().front());
+                //auto btnDel = dynamic_cast<Gtk::Button *>(box->get_children().back());
+                etyDirectionServidor->set_text(labelPrincipal->get_text());
+
+                if(checkConeccion())
+                {
+                    Global::Var::ipDirection = etyDirectionServidor->get_text();
+                    etyDirectionServidor->set_css_classes({"success"});
+                }
+                else
+                {
+                    etyDirectionServidor->set_css_classes({"error"});
+                }
+            }
+        }
     }
 } // namespaces View

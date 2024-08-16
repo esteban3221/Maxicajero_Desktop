@@ -8,7 +8,6 @@ namespace View
     class HeaderBarMain : public Gtk::HeaderBar
     {
     private:
-        Gtk::MenuButton menuShowIP;
         Gtk::Popover popOverConfig;
 
         const char *XML;

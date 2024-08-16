@@ -12,14 +12,17 @@ namespace Controller
     {
     private:
         void onActiveEntry();
+        void onIpRowActivated(Gtk::ListBoxRow *row);
         void updateProgressIndicator(int remaining, int total);
         void finalizeConeccion(bool success);
         bool checkConeccion();
+        void initList();
 
         Helper::Async asyncGui;
         std::atomic<bool> isCheckConeccion;
+        std::atomic<bool> isinConeccion;
 
-        Gtk::ListBoxRow *rowListIp(const std::string &label);
+        Gtk::ListBoxRow *rowListIp(const std::string &id ,const std::string &label);
 
     public:
         HeaderBarMain(/* args */);
