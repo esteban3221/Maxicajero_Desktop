@@ -27,9 +27,15 @@ set(SOURCES
     src/controller/header_bar.cpp
 
     src/view/menu/menu.cpp
-    #src/model/menu/menu.cpp
     src/controller/menu/menu.cpp
 
+    src/view/menu/pago.cpp
+    #src/controller/menu/pago.cpp
+
+
+    #=============================
+    src/view/component/nip.cpp
+    src/view/component/tres_filas.cpp
 
 )
 
@@ -40,6 +46,7 @@ include_directories(include
                     include/shared/
                     include/db/
                     include/view/menu
+                    include/view/component
                     include/model/menu
                     include/controller/menu
                     )
