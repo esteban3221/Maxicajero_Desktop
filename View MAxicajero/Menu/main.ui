@@ -1,82 +1,279 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <requires lib="gtk" version="4.0"/>
-  <object class="GtkBox">
+  <object class="GtkBox" id="boxMenu">
     <property name="margin-bottom">10</property>
     <property name="margin-start">10</property>
     <property name="margin-end">10</property>
     <property name="margin-top">10</property>
     <child>
-      <object class="GtkScrolledWindow" id="scrolled_window">
-        <property name="propagate-natural-width">true</property>
+      <object class="GtkBox">
+        <property name="spacing">10</property>
+        <property name="orientation">1</property>
         <child>
-          <object class="GtkListBox">
-            <property name="valign">1</property>
-            <property name="activate-on-single-click">true</property>
-            <property name="selection-mode">1</property>
-            <child>
+          <object class="GtkButton" id="btnCerrarSesion">
+            <property name="child">
               <object class="GtkBox">
-                <property name="spacing">10</property>
                 <child>
                   <object class="GtkImage">
-                    <property name="icon-name">money-symbolic</property>
+                    <property name="icon-name">system-log-out-symbolic</property>
                   </object>
                 </child>
+                <property name="spacing">10</property>
                 <child>
                   <object class="GtkLabel">
-                    <property name="label">Venta</property>
+                    <property name="label" translatable="true">Cerrar Sesion</property>
                   </object>
                 </child>
               </object>
-            </child>
-            <child>
-              <object class="GtkBox">
-                <property name="spacing">10</property>
-                <child>
-                  <object class="GtkImage">
-                    <property name="icon-name">coin-symbolic</property>
-                  </object>
-                </child>
-                <child>
-                  <object class="GtkLabel">
-                    <property name="label">Pago</property>
-                  </object>
-                </child>
-              </object>
-            </child>
-            <child>
-              <object class="GtkBox">
-                <property name="spacing">10</property>
-                <child>
-                  <object class="GtkImage">
-                    <property name="icon-name">resources-symbolic</property>
-                  </object>
-                </child>
-                <child>
-                  <object class="GtkLabel">
-                    <property name="label">Consulta de Efectivo</property>
-                  </object>
-                </child>
-              </object>
-            </child>
-            <child>
-              <object class="GtkBox">
-                <property name="spacing">10</property>
-                <child>
-                  <object class="GtkImage">
-                    <property name="icon-name">resources-symbolic</property>
-                  </object>
-                </child>
-                <child>
-                  <object class="GtkLabel">
-                    <property name="label">Carga / Refill</property>
-                  </object>
-                </child>
-              </object>
-            </child>
+            </property>
             <style>
-              <class name="navigation-sidebar"/>
+              <class name="flat"/>
             </style>
+          </object>
+        </child>
+        <child>
+          <object class="GtkSeparator"></object>
+        </child>
+        <child>
+          <object class="GtkScrolledWindow" id="scrolled_window">
+            <property name="propagate-natural-width">true</property>
+            <property name="vexpand">true</property>
+            <child>
+              <object class="GtkListBox" id="listBoxMenu">
+                <property name="valign">1</property>
+                <property name="activate-on-single-click">true</property>
+                <property name="selection-mode">1</property>
+                <child>
+                  <object class="GtkBox">
+                    <property name="spacing">10</property>
+                    <child>
+                      <object class="GtkImage">
+                        <property name="icon-name">money-symbolic</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="label">Venta</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="spacing">10</property>
+                    <child>
+                      <object class="GtkImage">
+                        <property name="icon-name">coin-symbolic</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="label">Pago</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="spacing">10</property>
+                    <child>
+                      <object class="GtkImage">
+                        <property name="icon-name">resources-symbolic</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="label">Consulta de Efectivo</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="spacing">10</property>
+                    <child>
+                      <object class="GtkImage">
+                        <property name="icon-name">resources-symbolic</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="label">Carga / Refill</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="spacing">10</property>
+                    <child>
+                      <object class="GtkImage">
+                        <property name="icon-name">resources-symbolic</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="label">Retirada</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="spacing">10</property>
+                    <child>
+                      <object class="GtkImage">
+                        <property name="icon-name">resources-symbolic</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="label">Conslta movimientos</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="spacing">10</property>
+                    <child>
+                      <object class="GtkImage">
+                        <property name="icon-name">resources-symbolic</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="label">Traspasar a casete</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="spacing">10</property>
+                    <child>
+                      <object class="GtkImage">
+                        <property name="icon-name">resources-symbolic</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="label">Ingreso por importe</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="spacing">10</property>
+                    <child>
+                      <object class="GtkImage">
+                        <property name="icon-name">resources-symbolic</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="label">Cierre con faltantes</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="spacing">10</property>
+                    <child>
+                      <object class="GtkImage">
+                        <property name="icon-name">resources-symbolic</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="label">Fianza</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="spacing">10</property>
+                    <child>
+                      <object class="GtkImage">
+                        <property name="icon-name">resources-symbolic</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="label">Cambio manual</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="spacing">10</property>
+                    <child>
+                      <object class="GtkImage">
+                        <property name="icon-name">resources-symbolic</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="label">Estadisticas</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="spacing">10</property>
+                    <child>
+                      <object class="GtkImage">
+                        <property name="icon-name">resources-symbolic</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="label">Ajuste niveles</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="spacing">10</property>
+                    <child>
+                      <object class="GtkImage">
+                        <property name="icon-name">resources-symbolic</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="label">Cambio  automatica</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="spacing">10</property>
+                    <child>
+                      <object class="GtkImage">
+                        <property name="icon-name">resources-symbolic</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="label">Configuracion</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <style>
+                  <class name="navigation-sidebar"/>
+                </style>
+              </object>
+            </child>
           </object>
         </child>
       </object>

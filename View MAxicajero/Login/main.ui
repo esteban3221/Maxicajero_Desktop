@@ -33,12 +33,12 @@
             <property name="spacing">5</property>
             <property name="margin-top">25</property>
             <child>
-              <object class="GtkPasswordEntry">
+              <object class="GtkPasswordEntry" id="passwdEtyContrasenia">
                 <property name="margin-top">10</property>
               </object>
             </child>
             <child>
-              <object class="GtkButton" id="circular-plus">
+              <object class="GtkButton" id="btnAcceder">
                 <property name="valign">2</property>
                 <property name="label">&gt;</property>
                 <style>

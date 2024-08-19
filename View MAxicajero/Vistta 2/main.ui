@@ -87,7 +87,7 @@
                     <property name="margin-bottom">12</property>
                     <property name="spacing">10</property>
                     <child>
-                      <object class="GtkTreeView">
+                      <object class="GtkTreeView" id="treeRecicladorBilletes">
                         <property name="hexpand">true</property>
                       </object>
                     </child>

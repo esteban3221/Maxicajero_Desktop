@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <requires lib="gtk" version="4.0"/>
-  <object class="GtkBox">
+  <object class="GtkBox" id="boxCompSuperior">
     <property name="halign">3</property>
     <property name="valign">3</property>
     <child>
@@ -15,7 +15,7 @@
             <property name="row-spacing">10</property>
             <property name="column-spacing">10</property>
             <child>
-              <object class="GtkLabel">
+              <object class="GtkLabel" id="lblColum1">
                 <property name="label" translatable="true">Fila 1</property>
                 <property name="margin-bottom">12</property>
                 <layout>
@@ -25,7 +25,7 @@
               </object>
             </child>
             <child>
-              <object class="GtkEntry" id="etyFila1">
+              <object class="GtkEntry" id="etyColum1">
                 <property name="editable">false</property>
                 <layout>
                   <property name="row">1</property>
@@ -37,7 +37,7 @@
               </object>
             </child>
             <child>
-              <object class="GtkLabel">
+              <object class="GtkLabel" id="lblColum2">
                 <property name="label" translatable="true">Fila 2</property>
                 <property name="margin-bottom">12</property>
                 <layout>
@@ -47,7 +47,7 @@
               </object>
             </child>
             <child>
-              <object class="GtkEntry" id="etyFila2">
+              <object class="GtkEntry" id="etyColum2">
                 <property name="editable">false</property>
                 <layout>
                   <property name="row">1</property>
@@ -59,7 +59,7 @@
               </object>
             </child>
             <child>
-              <object class="GtkLabel">
+              <object class="GtkLabel" id="lblColum3">
                 <property name="label" translatable="true">Fila 3</property>
                 <property name="margin-bottom">12</property>
                 <layout>
@@ -69,7 +69,7 @@
               </object>
             </child>
             <child>
-              <object class="GtkEntry" id="etyFila3">
+              <object class="GtkEntry" id="etyColum3">
                 <layout>
                   <property name="row">1</property>
                   <property name="column">2</property>

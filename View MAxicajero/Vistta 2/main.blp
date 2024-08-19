@@ -1,6 +1,6 @@
 using Gtk 4.0;
 
-Box boxVistaEfectivo{
+Box boxVistaEfectivo {
   spacing: 20;
   halign: center;
   valign: center;
@@ -9,7 +9,7 @@ Box boxVistaEfectivo{
     orientation: vertical;
     spacing: 20;
 
-    Frame frmRecicladorMonedas{
+    Frame frmRecicladorMonedas {
       Box {
         margin-start: 12;
         margin-end: 12;
@@ -19,7 +19,7 @@ Box boxVistaEfectivo{
           label: 'Reciclador de Monedas';
 
           styles [
-            "title-1"
+            "title-1",
           ]
         }
 
@@ -31,7 +31,7 @@ Box boxVistaEfectivo{
             label: 'Total';
 
             styles [
-              "title-2"
+              "title-2",
             ]
           }
 
@@ -39,7 +39,7 @@ Box boxVistaEfectivo{
             label: '0.00 MXN';
 
             styles [
-              "title-4"
+              "title-4",
             ]
           }
 
@@ -47,7 +47,7 @@ Box boxVistaEfectivo{
             label: 'Total';
 
             styles [
-              "title-2"
+              "title-2",
             ]
           }
 
@@ -55,14 +55,14 @@ Box boxVistaEfectivo{
             label: '100';
 
             styles [
-              "title-4"
+              "title-4",
             ]
           }
         }
       }
     }
 
-    Frame frmRecicladorBilletes{
+    Frame frmRecicladorBilletes {
       Box {
         margin-start: 12;
         margin-end: 12;
@@ -72,7 +72,7 @@ Box boxVistaEfectivo{
           label: 'Reciclador de Billetes';
 
           styles [
-            "title-1"
+            "title-1",
           ]
         }
 
@@ -81,7 +81,7 @@ Box boxVistaEfectivo{
           margin-bottom: 12;
           spacing: 10;
 
-          TreeView {
+          TreeView treeRecicladorBilletes{
             hexpand: true;
           }
 
@@ -93,7 +93,7 @@ Box boxVistaEfectivo{
               label: 'Total';
 
               styles [
-                "title-2"
+                "title-2",
               ]
             }
 
@@ -101,7 +101,7 @@ Box boxVistaEfectivo{
               label: '0.00 MXN';
 
               styles [
-                "title-4"
+                "title-4",
               ]
             }
 
@@ -109,7 +109,7 @@ Box boxVistaEfectivo{
               label: 'Total';
 
               styles [
-                "title-2"
+                "title-2",
               ]
             }
 
@@ -117,7 +117,7 @@ Box boxVistaEfectivo{
               label: '100';
 
               styles [
-                "title-4"
+                "title-4",
               ]
             }
           }
@@ -126,12 +126,11 @@ Box boxVistaEfectivo{
     }
   }
 
-  // ============ Segunda Fila =============
   Box {
     spacing: 20;
     orientation: vertical;
 
-    Frame frmTotal{
+    Frame frmTotal {
       Box {
         margin-start: 12;
         margin-end: 12;
@@ -141,7 +140,7 @@ Box boxVistaEfectivo{
           label: 'Total';
 
           styles [
-            "title-1"
+            "title-1",
           ]
         }
 
@@ -149,13 +148,13 @@ Box boxVistaEfectivo{
           label: '8,410.00 MXN';
 
           styles [
-            "title-2"
+            "title-2",
           ]
         }
       }
     }
 
-    Frame frmTotal2{
+    Frame frmTotal2 {
       Box {
         margin-start: 12;
         margin-end: 12;
@@ -165,7 +164,7 @@ Box boxVistaEfectivo{
           label: 'Total';
 
           styles [
-            "title-1"
+            "title-1",
           ]
         }
 
@@ -173,13 +172,13 @@ Box boxVistaEfectivo{
           label: '8,410.00 MXN';
 
           styles [
-            "title-2"
+            "title-2",
           ]
         }
       }
     }
 
-    Frame frmTotal3{
+    Frame frmTotal3 {
       Box {
         margin-start: 12;
         margin-end: 12;
@@ -189,7 +188,7 @@ Box boxVistaEfectivo{
           label: 'Total';
 
           styles [
-            "title-1"
+            "title-1",
           ]
         }
 
@@ -197,14 +196,13 @@ Box boxVistaEfectivo{
           label: '8,410.00 MXN';
 
           styles [
-            "title-2"
+            "title-2",
           ]
         }
       }
     }
 
-    Frame frmCasetteBilletes{
-      // margin-bottom: 12;
+    Frame frmCasetteBilletes {
       Box {
         margin-start: 12;
         margin-end: 12;
@@ -214,7 +212,7 @@ Box boxVistaEfectivo{
           label: 'Casette de Billetes';
 
           styles [
-            "title-1"
+            "title-1",
           ]
         }
 
@@ -222,7 +220,7 @@ Box boxVistaEfectivo{
           label: '8,410.00 MXN';
 
           styles [
-            "title-2"
+            "title-2",
           ]
         }
       }

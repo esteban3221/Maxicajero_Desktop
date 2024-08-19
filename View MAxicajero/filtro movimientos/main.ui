@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <requires lib="gtk" version="4.0"/>
-  <object class="GtkBox">
+  <object class="GtkBox" id="boxMovimientos">
     <property name="spacing">15</property>
     <property name="orientation">1</property>
     <child>
       <object class="GtkLabel">
+        <property name="margin-start">150</property>
         <property name="halign">1</property>
         <property name="label">Fecha</property>
         <style>
@@ -14,7 +15,7 @@
       </object>
     </child>
     <child>
-      <object class="GtkListBox">
+      <object class="GtkListBox" id="listBoxFecha">
         <property name="selection-mode">0</property>
         <property name="margin-start">150</property>
         <property name="margin-end">150</property>
@@ -27,18 +28,18 @@
                     <property name="hexpand">true</property>
                     <property name="halign">1</property>
                     <child>
-                      <object class="GtkLabel">
+                      <object class="GtkLabel" id="lblFechaInicio">
                         <property name="label">Fecha Inicio</property>
                       </object>
                     </child>
                     <child>
-                      <object class="GtkEntry">
+                      <object class="GtkEntry" id="etyFechaInicio">
                         <property name="margin-start">10</property>
                         <property name="valign">3</property>
                       </object>
                     </child>
                     <child>
-                      <object class="GtkButton">
+                      <object class="GtkButton" id="btnFechaInicio">
                         <property name="valign">3</property>
                         <property name="icon-name">month-symbolic</property>
                       </object>
@@ -54,13 +55,13 @@
                       </object>
                     </child>
                     <child>
-                      <object class="GtkEntry">
+                      <object class="GtkEntry" id="etyHoraInicio">
                         <property name="margin-start">10</property>
                         <property name="valign">3</property>
                       </object>
                     </child>
                     <child>
-                      <object class="GtkButton">
+                      <object class="GtkButton" id="btnHoraInicio">
                         <property name="valign">3</property>
                         <property name="icon-name">month-symbolic</property>
                       </object>
@@ -85,13 +86,13 @@
                       </object>
                     </child>
                     <child>
-                      <object class="GtkEntry">
+                      <object class="GtkEntry" id="etyFechaFin">
                         <property name="margin-start">10</property>
                         <property name="valign">3</property>
                       </object>
                     </child>
                     <child>
-                      <object class="GtkButton">
+                      <object class="GtkButton" id="btnFechaFin">
                         <property name="valign">3</property>
                         <property name="icon-name">month-symbolic</property>
                       </object>
@@ -107,13 +108,13 @@
                       </object>
                     </child>
                     <child>
-                      <object class="GtkEntry">
+                      <object class="GtkEntry" id="etyHoraFin">
                         <property name="margin-start">10</property>
                         <property name="valign">3</property>
                       </object>
                     </child>
                     <child>
-                      <object class="GtkButton">
+                      <object class="GtkButton" id="btnHoraFin">
                         <property name="valign">3</property>
                         <property name="icon-name">month-symbolic</property>
                       </object>
@@ -136,7 +137,7 @@
                   </object>
                 </child>
                 <child>
-                  <object class="GtkDropDown" id="drop_down">
+                  <object class="GtkDropDown" id="dropDownUsuario">
                     <property name="enable-search">true</property>
                   </object>
                 </child>
@@ -152,6 +153,8 @@
     </child>
     <child>
       <object class="GtkLabel">
+        <property name="margin-top">10</property>
+        <property name="margin-start">150</property>
         <property name="halign">1</property>
         <property name="label">Tipo</property>
         <style>
@@ -165,16 +168,131 @@
         <property name="margin-end">150</property>
         <child>
           <object class="GtkBox">
+            <property name="margin-start">10</property>
+            <property name="margin-end">10</property>
+            <property name="margin-top">10</property>
+            <property name="margin-bottom">10</property>
+            <property name="homogeneous">true</property>
             <property name="orientation">0</property>
             <child>
               <object class="GtkBox">
+                <property name="orientation">1</property>
                 <child>
-                  <object class="GtkCheckButton" id="checkbox_0">
-                    <property name="label" translatable="true">Auto-Save Changes</property>
+                  <object class="GtkCheckButton" id="checkbox0">
+                    <property name="label" translatable="true">Venta</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkCheckButton" id="checkbox1">
+                    <property name="label" translatable="true">Pago</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkCheckButton" id="checkbox2">
+                    <property name="label" translatable="true">Dar Cambio</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkCheckButton" id="checkbox3">
+                    <property name="label" translatable="true">Carga</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkCheckButton" id="checkbox4">
+                    <property name="label" translatable="true">Ingreso</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkCheckButton" id="checkbox5">
+                    <property name="label" translatable="true">Ingreso Importe</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkCheckButton" id="checkbox6">
+                    <property name="label" translatable="true">Retirada</property>
                   </object>
                 </child>
               </object>
             </child>
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">1</property>
+                <child>
+                  <object class="GtkCheckButton" id="checkbox7">
+                    <property name="label" translatable="true">Retiada casete</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkCheckButton" id="checkbox8">
+                    <property name="label" translatable="true">Venta Pendiente</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkCheckButton" id="checkbox9">
+                    <property name="label" translatable="true">Cancelacion no devuelta</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkCheckButton" id="checkbox10">
+                    <property name="label" translatable="true">Pago cambio no disponible</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkCheckButton" id="checkbox11">
+                    <property name="label" translatable="true">Cambio dispositivo</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkCheckButton" id="checkbox12">
+                    <property name="label" translatable="true">Cierre</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">1</property>
+                <child>
+                  <object class="GtkButton" id="btnTodos">
+                    <property name="label">Todos</property>
+                    <property name="halign">3</property>
+                    <property name="valign">3</property>
+                    <style>
+                      <class name="flat"/>
+                    </style>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkButton" id="btnNinguno">
+                    <property name="label">Ninguno</property>
+                    <property name="halign">3</property>
+                    <property name="valign">3</property>
+                    <style>
+                      <class name="flat"/>
+                    </style>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="GtkBox">
+        <property name="halign">3</property>
+        <property name="spacing">20</property>
+        <child>
+          <object class="GtkButton" id="btnAceptar">
+            <property name="label">Aceptar</property>
+            <style>
+              <class name="suggested-action"/>
+            </style>
+          </object>
+        </child>
+        <child>
+          <object class="GtkButton" id="btnCancelar">
+            <property name="label">Cancelar</property>
           </object>
         </child>
       </object>

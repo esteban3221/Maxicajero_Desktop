@@ -1,1 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <object class="GtkBox" id="boxDetallesOperacion">
+    <property name="orientation">1</property>
+    <property name="spacing">10</property>
+    <child>
+      <object class="GtkBox">
+        <property name="margin-start">10</property>
+        <property name="spacing">10</property>
+        <child>
+          <object class="GtkButton" id="btnDetalles">
+            <property name="child">
+              <object class="GtkBox">
+                <property name="spacing">10</property>
+                <child>
+                  <object class="GtkImage">
+                    <property name="icon-name">funnel-outline-symbolic</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="label">Detalles</property>
+                  </object>
+                </child>
+              </object>
+            </property>
+            <style>
+              <class name="flat"/>
+            </style>
+          </object>
+        </child>
+        <child>
+          <object class="GtkButton" id="btnFiltro">
+            <property name="child">
+              <object class="GtkBox">
+                <property name="spacing">10</property>
+                <child>
+                  <object class="GtkImage">
+                    <property name="icon-name">funnel-outline-symbolic</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="label">Filtro</property>
+                  </object>
+                </child>
+              </object>
+            </property>
+            <style>
+              <class name="flat"/>
+            </style>
+          </object>
+        </child>
+        <style>
+          <class name="sidebar-pane"/>
+        </style>
+      </object>
+    </child>
+    <child>
+      <object class="GtkScrolledWindow">
+        <property name="hexpand">true</property>
+        <property name="vexpand">true</property>
+        <child>
+          <object class="GtkTreeView" id="treeDetalles"></object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

@@ -1,1 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <object class="GtkBox" id="boxEfectivo">
+    <property name="orientation">0</property>
+    <property name="halign">3</property>
+    <property name="spacing">10</property>
+    <child>
+      <object class="GtkFrame" id="frmBilletes">
+        <property name="label">Billetes</property>
+        <child>
+          <object class="GtkTreeView" id="treeBilletes"></object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="GtkFrame" id="frmMonedas">
+        <property name="label">Monedas</property>
+        <child>
+          <object class="GtkTreeView" id="treeMonedas"></object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
