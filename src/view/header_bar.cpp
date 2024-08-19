@@ -51,12 +51,17 @@ namespace View
         //this->etyDirectionServidor->set_size_request(300, -1);
         this->popOverConfig.set_size_request(350, 400);
         
-        Global::Widget::menuShowIP = new Gtk::MenuButton;
+        lblHeaderBar.set_markup("<b>Maxicajero</b>");
 
+        Global::Widget::menuShowIP = new Gtk::MenuButton;
+        Global::Widget::lblHeaderBar = &lblHeaderBar;
+
+        this->set_title_widget(*Global::Widget::lblHeaderBar);
         this->popOverConfig.set_child(*boxConfguracionIP);
         this->pack_start(*Global::Widget::menuShowIP);
         Global::Widget::menuShowIP->set_popover(popOverConfig);
         Global::Widget::menuShowIP->set_icon_name("applications-system-symbolic");
+        
     }
 
     HeaderBarMain::~HeaderBarMain()

@@ -13,7 +13,18 @@ namespace Global
     } // namespace Var
     namespace Widget
     {
+        // header
         extern Gtk::MenuButton *menuShowIP;
+        extern Gtk::Label *lblHeaderBar;
+
+        // menu
+        extern Gtk::Button *btnCerrarSesion;
+        extern Gtk::ProgressBar *progress;
+        extern Gtk::InfoBar *infobar;
+        extern Gtk::ListBox *listBoxMenu;
+
+        // navigation
+        extern Gtk::Stack *stackMain;
     } // namespace Widget
 
     namespace User

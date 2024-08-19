@@ -279,8 +279,26 @@
       </object>
     </child>
     <child>
-      <object class="GtkStack">
-        <property name="hexpand">true</property>
+      <object class="GtkBox">
+        <property name="orientation">1</property>
+        <child>
+          <object class="GtkProgressBar" id="progress"></object>
+        </child>
+        <child>
+          <object class="GtkOverlay">
+            <child type="overlay">
+              <object class="GtkInfoBar" id="infobar">
+                <property name="revealed">false</property>
+                <property name="show-close-button">true</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkStack" id="stackMenu">
+                <property name="hexpand">true</property>
+              </object>
+            </child>
+          </object>
+        </child>
       </object>
     </child>
   </object>

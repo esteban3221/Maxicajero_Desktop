@@ -226,7 +226,22 @@ Box boxMenu {
     }
   }
 
-  Stack {
-    hexpand: true;
+  Box {
+    orientation: vertical;
+
+    ProgressBar progress {}
+
+    Overlay {
+      [overlay]
+      InfoBar infobar {
+      revealed :false;
+      show-close-button :true;
+      
+      }
+
+      Stack stackMenu {
+        hexpand: true;
+      }
+    }
   }
 }

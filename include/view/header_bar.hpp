@@ -9,13 +9,13 @@ namespace View
     {
     private:
         Gtk::Popover popOverConfig;
-
         const char *XML;
 
     protected:
         Gtk::Box *boxConfguracionIP;
         Gtk::Entry *etyDirectionServidor;
         Gtk::ListBox *listIpSaves;
+        Gtk::Label lblHeaderBar;
 
     public:
         HeaderBarMain(/* args */);

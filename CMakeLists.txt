@@ -25,6 +25,12 @@ set(SOURCES
     src/view/header_bar.cpp
     src/model/header_bar.cpp
     src/controller/header_bar.cpp
+
+    src/view/menu/menu.cpp
+    #src/model/menu/menu.cpp
+    src/controller/menu/menu.cpp
+
+
 )
 
 include_directories(include 
@@ -32,7 +38,13 @@ include_directories(include
                     include/model/
                     include/controller/
                     include/shared/
-                    include/db/)
+                    include/db/
+                    include/view/menu
+                    include/model/menu
+                    include/controller/menu
+                    )
+
+
 
 add_executable(Maxicajero ${SOURCES})
 
