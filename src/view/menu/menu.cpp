@@ -1,5 +1,4 @@
 #include "menu.hpp"
-
 ViewMenu::ViewMenu() : XML("<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
                                      "<interface>"
                                      "<requires lib=\"gtk\" version=\"4.0\"/>"
