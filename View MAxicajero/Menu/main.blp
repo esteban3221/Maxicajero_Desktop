@@ -1,6 +1,6 @@
 using Gtk 4.0;
 
-Box boxMenu{
+Box boxMenu {
   margin-bottom: 10;
   margin-start: 10;
   margin-end: 10;
@@ -10,15 +10,19 @@ Box boxMenu{
     spacing: 10;
     orientation: vertical;
 
-    Button btnCerrarSesion{
-      //
-      //
-      
-      child : Box{
-      Image {icon-name: 'system-log-out-symbolic';}
-      spacing: 10;
-      Label {label: _("Cerrar Sesion");}
+    Button btnCerrarSesion {
+      child: Box {
+        Image {
+          icon-name: 'system-log-out-symbolic';
+        }
+
+        spacing: 10;
+
+        Label {
+          label: _('Cerrar Sesion');
+        }
       };
+
       styles [
         "flat",
       ]
@@ -30,7 +34,7 @@ Box boxMenu{
       propagate-natural-width: true;
       vexpand: true;
 
-      ListBox listBoxMenu{
+      ListBox listBoxMenu {
         valign: start;
         activate-on-single-click: true;
         selection-mode: single;
@@ -47,7 +51,7 @@ Box boxMenu{
           }
         }
 
-        Box{
+        Box {
           spacing: 10;
 
           Image {
@@ -71,7 +75,7 @@ Box boxMenu{
           }
         }
 
-        Box{
+        Box {
           spacing: 10;
 
           Image {
@@ -83,7 +87,7 @@ Box boxMenu{
           }
         }
 
-        Box{
+        Box {
           spacing: 10;
 
           Image {
@@ -95,7 +99,7 @@ Box boxMenu{
           }
         }
 
-        Box{
+        Box {
           spacing: 10;
 
           Image {
@@ -107,7 +111,7 @@ Box boxMenu{
           }
         }
 
-        Box{
+        Box {
           spacing: 10;
 
           Image {
@@ -119,7 +123,7 @@ Box boxMenu{
           }
         }
 
-        Box{
+        Box {
           spacing: 10;
 
           Image {
@@ -131,7 +135,7 @@ Box boxMenu{
           }
         }
 
-        Box{
+        Box {
           spacing: 10;
 
           Image {

@@ -1,6 +1,6 @@
 using Gtk 4.0;
 
-Box boxConfImpresora{
+Box boxConfImpresora {
   spacing: 10;
   homogeneous: true;
 
@@ -28,8 +28,8 @@ Box boxConfImpresora{
     }
 
     ScrolledWindow {
-      ListBox listBoxPrint{
-        ListBoxRow listBoxRowPrint{
+      ListBox listBoxPrint {
+        ListBoxRow listBoxRowPrint {
           activatable: false;
 
           Label {
@@ -47,7 +47,7 @@ Box boxConfImpresora{
         ]
       }
     }
-  }  
+  }
 
   Box {
     orientation: vertical;
@@ -63,8 +63,9 @@ Box boxConfImpresora{
       ]
     }
 
-    Notebook ntbookPropiedades{
-    vexpand:true;
+    Notebook ntbookPropiedades {
+      vexpand: true;
+
       ScrolledWindow {
         Box {
           margin-bottom: 30;
@@ -82,7 +83,7 @@ Box boxConfImpresora{
             ]
           }
 
-          ListBox listBoxPage1{
+          ListBox listBoxPage1 {
             selection-mode: none;
             margin-bottom: 30;
 
@@ -124,7 +125,7 @@ Box boxConfImpresora{
 
             ListBoxRow {
               Box {
-                Label lblMensaje1{
+                Label lblMensaje1 {
                   halign: start;
                   hexpand: true;
                   label: 'Mensaje de Agradecimiento';
@@ -142,7 +143,7 @@ Box boxConfImpresora{
               }
             }
 
-            ListBoxRow{
+            ListBoxRow {
               Box {
                 Label lblFecha1 {
                   halign: start;
@@ -259,7 +260,7 @@ Box boxConfImpresora{
             ]
           }
 
-          ListBox listBoxTest1{
+          ListBox listBoxTest1 {
             selection-mode: none;
 
             ListBoxRow {
