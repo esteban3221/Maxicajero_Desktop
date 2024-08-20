@@ -5,7 +5,7 @@
 
 class Pago : public Gtk::Box
 {
-private:
+protected:
     TresFilas tresfilas;
     Nip nip;
 public:

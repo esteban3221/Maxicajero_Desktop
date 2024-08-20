@@ -1,7 +1,7 @@
 #pragma once 
 #include <gtkmm.h>
 #include "global.hpp"
-#include "view/menu/pago.hpp"
+#include "controller/menu/pago.hpp"
 
 class ViewMenu : public Gtk::Box
 {
@@ -11,7 +11,7 @@ private:
     Gtk::Box *boxMenu = nullptr;
 
     //=========== Vistas ==========
-    Pago pago;
+    ControllerPago pago;
 protected:
     Gtk::Stack *stackMenu = nullptr;
 
