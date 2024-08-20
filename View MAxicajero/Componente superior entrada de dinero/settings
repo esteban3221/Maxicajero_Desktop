@@ -8,6 +8,6 @@ show-ui=true
 show-console=true
 edited=true
 user-interface-language='xml'
-maximized=true
+maximized=false
 width=1440
 height=1048

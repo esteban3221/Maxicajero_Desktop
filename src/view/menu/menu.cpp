@@ -289,6 +289,8 @@ ViewMenu::ViewMenu() : XML("<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
                                      "<object class=\"GtkOverlay\">"
                                      "<child type=\"overlay\">"
                                      "<object class=\"GtkInfoBar\" id=\"infobar\">"
+                                     "<property name=\"valign\">1</property>"
+                                     "<property name=\"halign\">3</property>"
                                      "<property name=\"revealed\">false</property>"
                                      "<property name=\"show-close-button\">true</property>"
                                      "</object>"
@@ -318,6 +320,8 @@ ViewMenu::ViewMenu() : XML("<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
 
     this->stackMenu->set_transition_type(Gtk::StackTransitionType::SLIDE_UP_DOWN);
     this->boxMenu->set_margin(10);
+
+    stackMenu->add(pago,"0");
 
     this->append(*boxMenu);
 }

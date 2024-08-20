@@ -101,7 +101,8 @@ TresFilas::TresFilas(/* args */) : XML("<?xml version=\"1.0\" encoding=\"UTF-8\"
     etyColum2 = builder->get_widget<Gtk::Entry>("etyColum2");
     etyColum3 = builder->get_widget<Gtk::Entry>("etyColum3");
 
-
+    boxCompSuperior = builder->get_widget<Gtk::Box>("boxCompSuperior");
+    append(*boxCompSuperior);
 }
 
 TresFilas::~TresFilas()

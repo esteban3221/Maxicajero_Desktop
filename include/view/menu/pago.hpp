@@ -3,10 +3,11 @@
 #include "nip.hpp"
 
 
-class Pago : public Nip , public TresFilas final
+class Pago : public Gtk::Box
 {
 private:
-
+    TresFilas tresfilas;
+    Nip nip;
 public:
     Pago(/* args */);
     ~Pago();

@@ -6,12 +6,12 @@ ControllerMenu::ControllerMenu()
     Global::Widget::btnCerrarSesion->signal_clicked().connect(sigc::mem_fun(*this, &ControllerMenu::onBtnSessionClicked));
     Global::Widget::listBoxMenu->signal_row_activated().connect(sigc::mem_fun(*this, &ControllerMenu::onlistBoxActivade));
 
-    //test
-    for (size_t i = 0; i < 15; i++)
-    {
-        Gtk::Label lbltest(std::to_string(i)); 
-        stackMenu->add(lbltest,std::to_string(i));
-    }
+    // //test
+    // for (size_t i = 0; i < 15; i++)
+    // {
+    //     Gtk::Label lbltest(std::to_string(i)); 
+    //     stackMenu->add(lbltest,std::to_string(i));
+    // }
     
 }
 
