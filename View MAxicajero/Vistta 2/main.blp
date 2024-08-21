@@ -24,39 +24,51 @@ Box boxVistaEfectivo {
         }
 
         Box {
-          halign: end;
-          orientation: vertical;
+          margin-top: 12;
+          margin-bottom: 12;
+          spacing: 10;
 
-          Label {
-            label: 'Total';
-
-            styles [
-              "title-2",
-            ]
+          ColumnView treeRecicladorMonedas {
+            hexpand: true;
           }
 
-          Label {
-            label: '0.00 MXN';
+          Box {
+            halign: end;
+            orientation: vertical;
 
-            styles [
-              "title-4",
-            ]
-          }
+            Label {
+              label: 'Total';
 
-          Label {
-            label: 'Total';
+              styles [
+                "title-2",
+              ]
+            }
 
-            styles [
-              "title-2",
-            ]
-          }
+            Box {}
 
-          Label {
-            label: '100';
+            Label lblTotalMXN1 {
+              label: '0.00 MXN';
 
-            styles [
-              "title-4",
-            ]
+              styles [
+                "title-4",
+              ]
+            }
+
+            Label  {
+              label: 'Total';
+
+              styles [
+                "title-2",
+              ]
+            }
+
+            Label lblTotalNum1{
+              label: '100';
+
+              styles [
+                "title-4",
+              ]
+            }
           }
         }
       }
@@ -81,7 +93,7 @@ Box boxVistaEfectivo {
           margin-bottom: 12;
           spacing: 10;
 
-          TreeView treeRecicladorBilletes {
+          ColumnView treeRecicladorBilletes {
             hexpand: true;
           }
 
@@ -97,7 +109,7 @@ Box boxVistaEfectivo {
               ]
             }
 
-            Label {
+            Label lblTotalMXN2 {
               label: '0.00 MXN';
 
               styles [
@@ -105,7 +117,7 @@ Box boxVistaEfectivo {
               ]
             }
 
-            Label {
+            Label  {
               label: 'Total';
 
               styles [
@@ -113,7 +125,7 @@ Box boxVistaEfectivo {
               ]
             }
 
-            Label {
+            Label lblTotalNum2{
               label: '100';
 
               styles [
@@ -144,7 +156,7 @@ Box boxVistaEfectivo {
           ]
         }
 
-        Label {
+        Label lblTotalMXN3 {
           label: '8,410.00 MXN';
 
           styles [
@@ -168,7 +180,7 @@ Box boxVistaEfectivo {
           ]
         }
 
-        Label {
+        Label lblTotalMXN4 {
           label: '8,410.00 MXN';
 
           styles [
@@ -192,7 +204,7 @@ Box boxVistaEfectivo {
           ]
         }
 
-        Label {
+        Label lblTotalMXN5 {
           label: '8,410.00 MXN';
 
           styles [
@@ -216,7 +228,7 @@ Box boxVistaEfectivo {
           ]
         }
 
-        Label {
+        Label lblTotalCasette {
           label: '8,410.00 MXN';
 
           styles [

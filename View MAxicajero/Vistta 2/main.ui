@@ -26,38 +26,53 @@
                 </child>
                 <child>
                   <object class="GtkBox">
-                    <property name="halign">2</property>
-                    <property name="orientation">1</property>
+                    <property name="margin-top">12</property>
+                    <property name="margin-bottom">12</property>
+                    <property name="spacing">10</property>
                     <child>
-                      <object class="GtkLabel">
-                        <property name="label">Total</property>
-                        <style>
-                          <class name="title-2"/>
-                        </style>
+                      <object class="GtkColumnView" id="treeRecicladorMonedas">
+                        <property name="hexpand">true</property>
                       </object>
                     </child>
                     <child>
-                      <object class="GtkLabel">
-                        <property name="label">0.00 MXN</property>
-                        <style>
-                          <class name="title-4"/>
-                        </style>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="GtkLabel">
-                        <property name="label">Total</property>
-                        <style>
-                          <class name="title-2"/>
-                        </style>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="GtkLabel">
-                        <property name="label">100</property>
-                        <style>
-                          <class name="title-4"/>
-                        </style>
+                      <object class="GtkBox">
+                        <property name="halign">2</property>
+                        <property name="orientation">1</property>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="label">Total</property>
+                            <style>
+                              <class name="title-2"/>
+                            </style>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkBox"></object>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="lblTotalMXN1">
+                            <property name="label">0.00 MXN</property>
+                            <style>
+                              <class name="title-4"/>
+                            </style>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="label">Total</property>
+                            <style>
+                              <class name="title-2"/>
+                            </style>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="lblTotalNum1">
+                            <property name="label">100</property>
+                            <style>
+                              <class name="title-4"/>
+                            </style>
+                          </object>
+                        </child>
                       </object>
                     </child>
                   </object>
@@ -87,7 +102,7 @@
                     <property name="margin-bottom">12</property>
                     <property name="spacing">10</property>
                     <child>
-                      <object class="GtkTreeView" id="treeRecicladorBilletes">
+                      <object class="GtkColumnView" id="treeRecicladorBilletes">
                         <property name="hexpand">true</property>
                       </object>
                     </child>
@@ -104,7 +119,7 @@
                           </object>
                         </child>
                         <child>
-                          <object class="GtkLabel">
+                          <object class="GtkLabel" id="lblTotalMXN2">
                             <property name="label">0.00 MXN</property>
                             <style>
                               <class name="title-4"/>
@@ -120,7 +135,7 @@
                           </object>
                         </child>
                         <child>
-                          <object class="GtkLabel">
+                          <object class="GtkLabel" id="lblTotalNum2">
                             <property name="label">100</property>
                             <style>
                               <class name="title-4"/>
@@ -157,7 +172,7 @@
                   </object>
                 </child>
                 <child>
-                  <object class="GtkLabel">
+                  <object class="GtkLabel" id="lblTotalMXN3">
                     <property name="label">8,410.00 MXN</property>
                     <style>
                       <class name="title-2"/>
@@ -184,7 +199,7 @@
                   </object>
                 </child>
                 <child>
-                  <object class="GtkLabel">
+                  <object class="GtkLabel" id="lblTotalMXN4">
                     <property name="label">8,410.00 MXN</property>
                     <style>
                       <class name="title-2"/>
@@ -211,7 +226,7 @@
                   </object>
                 </child>
                 <child>
-                  <object class="GtkLabel">
+                  <object class="GtkLabel" id="lblTotalMXN5">
                     <property name="label">8,410.00 MXN</property>
                     <style>
                       <class name="title-2"/>
@@ -238,7 +253,7 @@
                   </object>
                 </child>
                 <child>
-                  <object class="GtkLabel">
+                  <object class="GtkLabel" id="lblTotalCasette">
                     <property name="label">8,410.00 MXN</property>
                     <style>
                       <class name="title-2"/>

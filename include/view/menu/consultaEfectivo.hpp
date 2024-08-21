@@ -8,15 +8,18 @@ private:
     
     const char *XML;
     Gtk::Box *boxVistaEfectivo = nullptr;
-    Gtk::Frame *frmRecicladorMonedas = nullptr;
-    Gtk::Frame *frmRecicladorBilletes = nullptr;
-    Gtk::TreeView *treeRecicladorBilletes = nullptr;
-    Gtk::Frame *frmTotal = nullptr;
-    Gtk::Frame *frmTotal2 = nullptr;
-    Gtk::Frame *frmTotal3 = nullptr;
-    Gtk::Frame *frmCasetteBilletes = nullptr;
+    //Hace referencia a los digitos en decimal MXN
+    Gtk::Label *lblTotalMXN1 = nullptr;
+    Gtk::Label *lblTotalMXN2 = nullptr;
+    Gtk::Label *lblTotalMXN3 = nullptr;
+    Gtk::Label *lblTotalMXN4 = nullptr;
+    Gtk::Label *lblTotalMXN5 = nullptr;
+    //HAce referencia a los digitos finales de los recicladores
+    Gtk::Label *lblTotalNum1 = nullptr;
+    Gtk::Label *lblTotalNum2 = nullptr; 
+    //Hace referencia a la cantidad de l casette
+    Gtk::Label *lblTotalCasette = nullptr;
 
-protected:
     Gtk::Stack *stackMenu = nullptr;
 
 public:
