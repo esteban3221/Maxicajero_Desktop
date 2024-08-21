@@ -32,18 +32,7 @@ namespace Controller
 
         
         for (const auto &cookie : r.cookies)
-        {
-            std::cout << cookie.GetDomain() << ":";
-            std::cout << cookie.IsIncludingSubdomains() << ":";
-            std::cout << cookie.GetPath() << ":";
-            std::cout << cookie.IsHttpsOnly() << ":";
-            std::cout << cookie.GetExpiresString() << ":";
-            std::cout << cookie.GetName() << ": token = ";
             Global::Var::session = cookie.GetValue();
-            std::cout << cookie.GetValue() << std::endl;
-            // For example, this will print:
-            // www.httpbin.org:0:/:0:Thu, 01 Jan 1970 00:00:00 GMT:cookies:yummy
-        }
 
         r  = cpr::Post(cpr::Url{urlBase + "sesion/login"},
                                     cpr::Header{
