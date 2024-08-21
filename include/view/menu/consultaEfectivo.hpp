@@ -8,6 +8,8 @@ private:
     
     const char *XML;
     Gtk::Box *boxVistaEfectivo = nullptr;
+    Gtk::ColumnView *colViewRecicladorBilletes = nullptr;
+    Gtk::ColumnView *colViewRecicladorMonedas = nullptr;
     //Hace referencia a los digitos en decimal MXN
     Gtk::Label *lblTotalMXN1 = nullptr;
     Gtk::Label *lblTotalMXN2 = nullptr;

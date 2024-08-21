@@ -74,5 +74,6 @@
         "valarray": "cpp",
         "variant": "cpp",
         "ranges": "cpp"
-    }
+    },
+    "C_Cpp.errorSquiggles": "enabled"
 }

@@ -2,6 +2,7 @@
 #include <gtkmm.h>
 #include "global.hpp"
 #include "controller/menu/pago.hpp"
+#include "controller/menu/consultaEfectivo.hpp"
 
 class ViewMenu : public Gtk::Box
 {
@@ -12,6 +13,7 @@ private:
 
     //=========== Vistas ==========
     ControllerPago pago;
+    ControllerConsultaEfectivo efectivo;
 protected:
     Gtk::Stack *stackMenu = nullptr;
 

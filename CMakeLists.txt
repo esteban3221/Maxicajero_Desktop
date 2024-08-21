@@ -37,9 +37,12 @@ set(SOURCES
     src/view/component/nip.cpp
     src/view/component/tres_filas.cpp
 
+    src/view/menu/consultaEfectivo.cpp
+    src/controller/menu/consultaEfectivo.cpp    
+
 )
 
-include_directories(include 
+include_directories(include
                     include/view/
                     include/model/
                     include/controller/
