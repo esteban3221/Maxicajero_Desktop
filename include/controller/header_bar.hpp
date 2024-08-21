@@ -1,10 +1,11 @@
 #pragma once
-#include <iostream>
-#include <cpr/cpr.h>
+
 #include "model/header_bar.hpp"
 #include "view/header_bar.hpp"
 #include "helper.hpp"
 #include <atomic>
+#include <cpr/cpr.h>
+#include <chrono>
 
 namespace Controller
 {

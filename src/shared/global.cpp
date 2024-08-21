@@ -7,6 +7,7 @@ namespace Global
         std::string ipDirection;
         std::string user;
         std::string token;
+        std::string session;
     } // namespace Var
     namespace Widget
     {
@@ -18,6 +19,7 @@ namespace Global
         Gtk::Button *btnCerrarSesion;
         Gtk::ProgressBar *progress;
         Gtk::InfoBar *infobar;
+        Gtk::Label *lblinfobar;
         Gtk::ListBox *listBoxMenu;
 
         // navigation

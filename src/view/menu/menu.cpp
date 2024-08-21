@@ -289,6 +289,8 @@ ViewMenu::ViewMenu() : XML("<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
                                      "<object class=\"GtkOverlay\">"
                                      "<child type=\"overlay\">"
                                      "<object class=\"GtkInfoBar\" id=\"infobar\">"
+                                     "<property name=\"valign\">1</property>"
+                                     "<property name=\"halign\">3</property>"
                                      "<property name=\"revealed\">false</property>"
                                      "<property name=\"show-close-button\">true</property>"
                                      "</object>"
@@ -307,6 +309,7 @@ ViewMenu::ViewMenu() : XML("<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
                                      
 {
     auto builder = Gtk::Builder::create_from_string(XML);
+    Global::Widget::lblinfobar = new Gtk::Label;
 
     this->boxMenu = builder->get_widget<Gtk::Box>("boxMenu");
     this->stackMenu = builder->get_widget<Gtk::Stack>("stackMenu");
@@ -315,9 +318,12 @@ ViewMenu::ViewMenu() : XML("<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
     Global::Widget::progress = builder->get_widget<Gtk::ProgressBar>("progress");
     Global::Widget::infobar = builder->get_widget<Gtk::InfoBar>("infobar");
     Global::Widget::listBoxMenu = builder->get_widget<Gtk::ListBox>("listBoxMenu");
+    Global::Widget::infobar->add_child(*Global::Widget::lblinfobar);
 
     this->stackMenu->set_transition_type(Gtk::StackTransitionType::SLIDE_UP_DOWN);
     this->boxMenu->set_margin(10);
+
+    stackMenu->add(pago,"0");
 
     this->append(*boxMenu);
 }

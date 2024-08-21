@@ -167,11 +167,10 @@ Nip::Nip(/* args */) : XML("<interface>"
         this->btn[i] = builder->get_widget<Gtk::Button>("btn_nip_" + std::to_string(i));
 
     for (int i = 0; i < 10; i++)
-        this->btn[i]->signal_clicked().connect([this, i]()
-                                                        { 
-                                                            entry->set_text(entry->get_text() + std::to_string(i)); 
-                                                        });
+        this->btn[i]->signal_clicked().connect([this, i]() { entry->set_text(entry->get_text() + std::to_string(i)); });
+        
     this->btnNipDel->signal_clicked().connect([this]() { entry->set_text(""); });
+    set_child(*boxNip);
 }
 
 Nip::~Nip()

@@ -30,7 +30,7 @@ set(SOURCES
     src/controller/menu/menu.cpp
 
     src/view/menu/pago.cpp
-    #src/controller/menu/pago.cpp
+    src/controller/menu/pago.cpp
 
 
     #=============================

@@ -1,5 +1,6 @@
 #pragma once
 #include <gtkmm.h>
+#include <queue>
 
 namespace Helper
 {

@@ -7,7 +7,12 @@ show-style=false
 show-ui=true
 show-console=true
 edited=true
+<<<<<<< HEAD
 maximized=false
 width=1440
+=======
+maximized=true
+width=1920
+>>>>>>> 57e34ac89900a355693ac88f94754c52cd75ca11
 height=1040
 user-interface-language='xml'
