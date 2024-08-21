@@ -3,6 +3,7 @@
 ControllerPago::ControllerPago(/* args */)
 {
     nip.btnNipEnter->signal_clicked().connect(sigc::mem_fun(*this, &ControllerPago::onBtnEnterActivated));
+    this->signal_map().connect([this](){nip.btnNipEnter->set_sensitive();});
 }
 
 ControllerPago::~ControllerPago()
@@ -31,25 +32,27 @@ void ControllerPago::onBtnEnterActivated()
 
     auto cpy = fr.share();
 
-    Glib::signal_timeout().connect([cpy]() mutable -> bool
+    nip.btnNipEnter->set_sensitive(false);
+
+    Glib::signal_timeout().connect([this,cpy]() mutable -> bool
                                    {
                                        Global::Widget::progress->pulse(); 
-
+                                       Global::Widget::listBoxMenu->set_sensitive(false);
                                        if (cpy.wait_for(std::chrono::milliseconds(0)) == std::future_status::ready)
                                        {
-                                           auto r = cpy.get(); // Obtener la respuesta
+                                           auto r = cpy.get(); 
+
+                                           auto json_data = nlohmann::json::parse(r.text);
+                                           Global::Widget::lblinfobar->set_text(json_data["status"].get<std::string>());
+                                           Global::Widget::infobar->set_revealed();
 
                                            if (r.status_code == 200)
-                                           {
-                                               std::cout << "Respuesta: " << r.text << std::endl;
-                                               Global::Widget::progress->set_fraction(1.0); 
-                                           }
+                                               Global::Widget::infobar->set_message_type(Gtk::MessageType::INFO);
                                            else
-                                           {
-                                               std::cout << "Error: " << r.status_code << std::endl;
-                                               std::cout << "Respuesta: " << r.text << std::endl;
-                                               Global::Widget::progress->set_fraction(0); 
-                                           }
+                                               Global::Widget::infobar->set_message_type(Gtk::MessageType::ERROR);
+                                           
+                                           Global::Widget::progress->set_fraction(1.0); 
+                                           //Global::Widget::btnCerrarSesion->activate();
                                            return false;
                                        }
                                        return true;

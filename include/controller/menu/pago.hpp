@@ -3,7 +3,8 @@
 #include <cpr/cpr.h>
 #include "global.hpp"
 #include <nlohmann/json.hpp>
-#include <atomic>
+#include <thread>
+#include <chrono>
 
 class ControllerPago : public Pago
 {

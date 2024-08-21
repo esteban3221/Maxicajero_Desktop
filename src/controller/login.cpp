@@ -52,6 +52,7 @@ namespace Controller
             Global::Widget::lblHeaderBar->set_markup("<b>" + Global::Var::user + "</b>");
             Global::Widget::menuShowIP->set_visible(false);
             Global::Widget::stackMain->set_visible_child("menu");
+            Global::Widget::listBoxMenu->set_sensitive();
         }
         else if (r.status_code == 401)
         {

@@ -27,6 +27,11 @@ void ControllerMenu::onBtnSessionClicked()
     Global::Widget::stackMain->set_visible_child("login");
     Global::Widget::lblHeaderBar->set_markup("<b>Maxicajero</b>");
     Global::Widget::menuShowIP->set_visible();
+
+    auto r = cpr::Post(cpr::Url{"http://" + Global::Var::ipDirection + ":44333/sesion/logout"},
+                             cpr::Header{
+                                 {"Authorization", "Bearer " + Global::Var::token},
+                                 {"Cookie", "session=" + Global::Var::session}});
 }
 
 void ControllerMenu::onlistBoxActivade(Gtk::ListBoxRow *row)
