@@ -31,6 +31,7 @@ set(SOURCES
 
     src/view/menu/pago.cpp
     src/controller/menu/pago.cpp
+    src/controller/menu/venta.cpp
 
 
     #=============================

@@ -323,8 +323,7 @@ ViewMenu::ViewMenu() : XML("<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
     this->stackMenu->set_transition_type(Gtk::StackTransitionType::SLIDE_UP_DOWN);
     this->boxMenu->set_margin(10);
 
-    stackMenu->add(pago,"1");
-    stackMenu->add(efectivo, "2");
+    stackMenu->add(pago,"0");
 
     this->append(*boxMenu);
 }

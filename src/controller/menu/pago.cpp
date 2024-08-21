@@ -3,6 +3,7 @@
 ControllerPago::ControllerPago(/* args */)
 {
     nip.btnNipEnter->signal_clicked().connect(sigc::mem_fun(*this, &ControllerPago::onBtnEnterActivated));
+    this->signal_map().connect([this](){nip.btnNipEnter->set_sensitive();});
 }
 
 ControllerPago::~ControllerPago()
@@ -23,27 +24,37 @@ void ControllerPago::onBtnEnterActivated()
     jsonData["value"] = std::stoll(nip.entry->get_text());
     std::string jsonString = jsonData.dump();
 
-    std::thread([jsonString](){
-        cpr::Response r = cpr::Post(cpr::Url{"http://" + Global::Var::ipDirection + ":44333/accion/venta"},
-                                cpr::Header{
-                                    {"Authorization", "Bearer "+ Global::Var::token},
-                                    {"Cookie", "session="+Global::Var::session}},
-                                cpr::Body{jsonString});
-    Glib::signal_timeout().connect([r]() -> bool
+    auto fr = cpr::PostAsync(cpr::Url{"http://" + Global::Var::ipDirection + ":44333/accion/venta"},
+                             cpr::Header{
+                                 {"Authorization", "Bearer " + Global::Var::token},
+                                 {"Cookie", "session=" + Global::Var::session}},
+                             cpr::Body{jsonString});
+
+    auto cpy = fr.share();
+
+    nip.btnNipEnter->set_sensitive(false);
+
+    Glib::signal_timeout().connect([this,cpy]() mutable -> bool
                                    {
-                                       Global::Widget::progress->pulse();
-                                       if (r.status_code == 200)
+                                       Global::Widget::progress->pulse(); 
+                                       Global::Widget::listBoxMenu->set_sensitive(false);
+                                       if (cpy.wait_for(std::chrono::milliseconds(0)) == std::future_status::ready)
                                        {
-                                           std::cout << "Respuesta: " << r.text << std::endl;
+                                           auto r = cpy.get(); 
+
+                                           auto json_data = nlohmann::json::parse(r.text);
+                                           Global::Widget::lblinfobar->set_text(json_data["status"].get<std::string>());
+                                           Global::Widget::infobar->set_revealed();
+
+                                           if (r.status_code == 200)
+                                               Global::Widget::infobar->set_message_type(Gtk::MessageType::INFO);
+                                           else
+                                               Global::Widget::infobar->set_message_type(Gtk::MessageType::ERROR);
+                                           
+                                           Global::Widget::progress->set_fraction(1.0); 
+                                           //Global::Widget::btnCerrarSesion->activate();
+                                           return false;
                                        }
-                                       else
-                                       {
-                                           std::cout << "Error: " << r.status_code << std::endl;
-                                           std::cout << "Respuesta: " << r.text << std::endl;
-                                       }
-                                       return r.text.empty();
-                                   },
-                                   50);
-    }).detach();
-    
+                                       return true;
+                                   }, 100);
 }
