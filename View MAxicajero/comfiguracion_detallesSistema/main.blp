@@ -1,0 +1,122 @@
+using Gtk 4.0;
+
+Box page_1 {
+  orientation: vertical;
+
+  ListBox list_info_systema {
+    ListBoxRow {
+      activatable: false;
+
+      Box {
+        Label {
+          halign: start;
+          label: 'Nombre del Dispositivo';
+        }
+
+        EditableLabel ety_info_host {
+          text: 'Type here…';
+          editable: true;
+          hexpand: true;
+          halign: end;
+
+          styles [
+            "dim-label",
+          ]
+        }
+      }
+    }
+
+    ListBoxRow {
+      activatable: false;
+
+      Box {
+        Label entry_ {
+          halign: start;
+          label: 'Modelo de Hardware';
+        }
+
+        EditableLabel ety_info_modelo {
+          text: 'Type here…';
+          editable: false;
+          hexpand: true;
+          halign: end;
+
+          styles [
+            "dim-label",
+          ]
+        }
+      }
+    }
+
+    ListBoxRow {
+      activatable: false;
+
+      Box {
+        Label {
+          halign: start;
+          label: 'Procesador';
+        }
+
+        EditableLabel ety_info_procesador {
+          text: 'Type here…';
+          editable: false;
+          hexpand: true;
+          halign: end;
+
+          styles [
+            "dim-label",
+          ]
+        }
+      }
+    }
+
+    ListBoxRow {
+      activatable: false;
+
+      Box {
+        Label {
+          halign: start;
+          label: 'Memoria';
+        }
+
+        EditableLabel ety_info_memoria {
+          text: 'Type here…';
+          editable: false;
+          hexpand: true;
+          halign: end;
+
+          styles [
+            "dim-label",
+          ]
+        }
+      }
+    }
+
+    ListBoxRow {
+      activatable: false;
+
+      Box {
+        Label {
+          halign: start;
+          label: 'Disco';
+        }
+
+        EditableLabel ety_info_disco {
+          text: 'Type here…';
+          editable: false;
+          hexpand: true;
+          halign: end;
+
+          styles [
+            "dim-label",
+          ]
+        }
+      }
+    }
+
+    styles [
+      "rich-list",
+      "boxed-list",
+    ]
+  }
+}
