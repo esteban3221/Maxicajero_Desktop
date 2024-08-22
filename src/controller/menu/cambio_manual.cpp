@@ -1,6 +1,14 @@
-#include "controller/menu/venta.hpp"
+#include "controller/menu/cambio_manual.hpp"
 
-inline void ControllerVenta::onBtnEnterActivated()
+ControllerCambioManual::ControllerCambioManual(/* args */)
+{
+}
+
+ControllerCambioManual::~ControllerCambioManual()
+{
+}
+
+inline void ControllerCambioManual::onBtnEnterActivated()
 {
     if (nip.entry->get_text().empty() || std::stoll(nip.entry->get_text()) < 1)
     {
@@ -14,7 +22,7 @@ inline void ControllerVenta::onBtnEnterActivated()
     jsonData["value"] = std::stoll(nip.entry->get_text());
     std::string jsonString = jsonData.dump();
 
-    auto fr = cpr::PostAsync(cpr::Url{"http://" + Global::Var::ipDirection + ":44333/accion/pago"},
+    auto fr = cpr::PostAsync(cpr::Url{"http://" + Global::Var::ipDirection + ":44333/accion/cambioM"},
                              cpr::Header{
                                  {"Authorization", "Bearer " + Global::Var::token},
                                  {"Cookie", "session=" + Global::Var::session}},
@@ -46,12 +54,4 @@ inline void ControllerVenta::onBtnEnterActivated()
                                        }
                                        return true;
                                    }, 100);
-}
-
-ControllerVenta::ControllerVenta(/* args */)
-{
-}
-
-ControllerVenta::~ControllerVenta()
-{
 }

@@ -12,8 +12,9 @@ ControllerPago::~ControllerPago()
 
 void ControllerPago::onBtnEnterActivated()
 {
-    if (nip.entry->get_text().empty())
+    if (nip.entry->get_text().empty() || std::stoll(nip.entry->get_text()) < 1)
     {
+        nip.entry->set_text("");
         Global::Widget::infobar->set_revealed();
         Global::Widget::lblinfobar->set_text("Ingrese el monto.");
         Global::Widget::infobar->set_message_type(Gtk::MessageType::WARNING);

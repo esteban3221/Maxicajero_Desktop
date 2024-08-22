@@ -29,17 +29,21 @@ set(SOURCES
     src/view/menu/menu.cpp
     src/controller/menu/menu.cpp
 
-    src/view/menu/pago.cpp
-    src/controller/menu/pago.cpp
-    src/controller/menu/venta.cpp
-
 
     #=============================
     src/view/component/nip.cpp
     src/view/component/tres_filas.cpp
 
     src/view/menu/consultaEfectivo.cpp
-    src/controller/menu/consultaEfectivo.cpp    
+    src/controller/menu/consultaEfectivo.cpp   
+    
+    src/view/menu/consulta_movimientos.cpp
+    src/controller/menu/consulta_movimientos.cpp   
+
+    src/view/menu/pago.cpp
+    src/controller/menu/pago.cpp
+    src/controller/menu/venta.cpp
+    src/controller/menu/cambio_manual.cpp
 
 )
 
