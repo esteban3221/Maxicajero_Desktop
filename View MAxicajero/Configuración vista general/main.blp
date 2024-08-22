@@ -1,14 +1,13 @@
 using Gtk 4.0;
-using Adw 1;
 
-Box boxConfGenerak{
+Box boxConfGenerak {
   orientation: vertical;
   halign: center;
   valign: center;
   spacing: 10;
 
   Label {
-    label: _("Configuración general");
+    label: _('Configuración general');
     halign: start;
 
     styles [
@@ -16,9 +15,8 @@ Box boxConfGenerak{
     ]
   }
 
-  // Separator {}
   Label {
-    label: _("Visulización");
+    label: _('Visualización');
     halign: start;
 
     styles [
@@ -30,26 +28,11 @@ Box boxConfGenerak{
 
   CheckButton checkbox1 {
     active: true;
-    label: _("Iniciar CashDro.exe miimizado");
-  }
-
-  CheckButton checkbox2 {
-    active: true;
-    label: _("Visualizar y validar por pantalla cambios no disponibles");
-  }
-
-  CheckButton checkbox3 {
-    active: true;
-    label: _("Validar por pantalla el inicio de las retiradas de efectivo");
-  }
-
-  CheckButton checkbox4 {
-    active: true;
-    label: _("Mostrar barra de alertas de efectivo");
+    label: _('Mostrar notificaciones');
   }
 
   Label {
-    label: _("Operaciones en efectivo");
+    label: _('Operaciones en efectivo');
     halign: start;
 
     styles [
@@ -61,17 +44,17 @@ Box boxConfGenerak{
 
   CheckButton checkbox5 {
     active: true;
-    label: _("Redondear cambio a favor del cliente");
+    label: _('Redondear cambio a favor del cliente');
   }
 
   CheckButton checkbox6 {
     active: true;
-    label: _("Al introducir un billete controlar su posible devolución");
+    label: _('Al introducir un billete controlar su posible devolución');
   }
 
   CheckButton checkbox7 {
     active: true;
-    label: _("Poder finalizar cualquier operación");
+    label: _('Poder finalizar cualquier operación');
   }
 
   Grid {
@@ -91,7 +74,7 @@ Box boxConfGenerak{
       }
     }
 
-    Entry etyLimitePago {
+    SpinButton etyLimitePago {
       editable: false;
 
       layout {
@@ -99,13 +82,11 @@ Box boxConfGenerak{
         column: '1';
       }
 
-      styles [
-        "title-4",
-      ]
+      
     }
 
     Label {
-      label: "Gestión de niveles y enrutamientos";
+      label: 'Gestión de niveles y enrutamientos';
 
       layout {
         row: '1';
@@ -115,7 +96,7 @@ Box boxConfGenerak{
 
     CheckButton checkbox8 {
       active: true;
-      label: _("Manual");
+      label: _('Manual');
 
       layout {
         row: '1';
@@ -125,7 +106,7 @@ Box boxConfGenerak{
 
     CheckButton checkbox9 {
       active: true;
-      label: _("Automático");
+      label: _('Automático');
 
       layout {
         row: '1';
@@ -136,7 +117,7 @@ Box boxConfGenerak{
 
   CheckButton checkbox10 {
     active: true;
-    label: _("Mostrar barra de alertas de efectivo");
+    label: _('Mostrar barra de alertas de efectivo');
 
     layout {
       row: '2';

@@ -7,6 +7,8 @@
 #include "controller/menu/consulta_movimientos.hpp"
 #include "controller/menu/cambio_manual.hpp"
 
+#include "view/menu/config/notepadACCESS.hpp"
+
 class ViewMenu : public Gtk::Box
 {
 private:
@@ -20,6 +22,8 @@ private:
     ControllerVenta venta;
     ControllerConsultaMovimientos movimientos;
     ControllerCambioManual cambioM;
+
+    ViewNotepad configuracion;
 
 protected:
     Gtk::Stack *stackMenu = nullptr;

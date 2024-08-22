@@ -321,6 +321,8 @@ ViewMenu::ViewMenu() : XML(
     Global::Widget::listBoxMenu = builder->get_widget<Gtk::ListBox>("listBoxMenu");
     Global::Widget::infobar->add_child(*Global::Widget::lblinfobar);
 
+    Global::Widget::btnCerrarSesion->set_size_request(200,-1);
+
     this->stackMenu->set_transition_type(Gtk::StackTransitionType::SLIDE_UP_DOWN);
     this->boxMenu->set_margin(10);
 
@@ -330,6 +332,8 @@ ViewMenu::ViewMenu() : XML(
 
     stackMenu->add(movimientos, "5");
     stackMenu->add(cambioM, "10");
+
+    stackMenu->add(configuracion, "14");
 
     this->append(*boxMenu);
 }

@@ -1,102 +1,334 @@
 using Gtk 4.0;
-using Adw 1;
 
-Adw.StatusPage {
-  title: _("Platform Tools");
+Box page_4 {
+  spacing: 10;
 
   Box {
     orientation: vertical;
 
-    Box {
-      orientation: vertical;
-      halign: center;
+    ScrolledWindow {
+      hexpand: true;
+      vexpand: true;
+      vexpand-set: true;
 
-      Button adwaita-1-demo {
-        label: _("Adwaita Demo");
-        action-name: "app.platform_tools";
-        action-target: "'adwaita-1-demo'";
-
-        styles [
-          "pill"
-        ]
-      }
-
-      LinkButton {
-        styles [
-          "caption"
-        ]
-
-        margin-bottom: 30;
-        label: _("Source Code");
-        uri: "https://gitlab.gnome.org/GNOME/libadwaita/-/tree/1.2.2/demo";
-      }
-
-      Button gtk4-demo {
-        label: _("GTK Demo");
-        action-name: "app.platform_tools";
-        action-target: "'gtk4-demo'";
-
-        styles [
-          "pill"
-        ]
-      }
-
-      LinkButton {
-        styles [
-          "caption"
-        ]
-
-        margin-bottom: 30;
-        label: _("Source Code");
-        uri: "https://gitlab.gnome.org/GNOME/gtk/-/tree/4.8.3/demos/gtk-demo";
-      }
-
-      Button gtk4-widget-factory {
-        label: _("GTK Widget Factory");
-        action-name: "app.platform_tools";
-        action-target: "'gtk4-widget-factory'";
-
-        styles [
-          "pill"
-        ]
-      }
-
-      LinkButton {
-        styles [
-          "caption"
-        ]
-
-        margin-bottom: 30;
-        label: _("Source Code");
-        uri: "https://gitlab.gnome.org/GNOME/gtk/-/tree/4.8.3/demos/widget-factory";
+      TreeView tree_usuarios {
+        enable-grid-lines: vertical;
+        enable-search: false;
       }
     }
 
     Box {
-      halign: center;
-      orientation: vertical;
+      margin-top: 5;
+      margin-start: 5;
+      margin-end: 5;
+      margin-bottom: 5;
+      spacing: 5;
 
-      Label {
-        label: _("As with most GTK applications, you can use the keyboard shortcut\nto open the Inspector and select an object to see what it is made of:");
-        justify: center;
+      Button btnAdd {
+        icon-name: 'list-add-symbolic';
 
         styles [
-          "body"
+          "circular",
+          "suggested-action",
         ]
       }
 
-      ShortcutsShortcut {
-        halign: center;
-        accelerator: "<Control><Shift>I";
-        margin-top: 6;
+      Button btnEdit {
+        icon-name: 'edit-symbolic';
+
+        styles [
+          "circular",
+          "warning",
+        ]
       }
 
-      LinkButton {
-        margin-top: 6;
+      Button btnDel {
+        icon-name: 'list-remove-symbolic';
+
+        styles [
+          "circular",
+          "destructive-action",
+        ]
+      }
+    }
+  }
+
+  Frame {
+    label: 'Permisos';
+
+    Grid {
+      column-homogeneous: true;
+
+      CheckButton check_rol_1 {
+        label: 'Venta';
+        halign: start;
+        margin-end: 10;
+        margin-start: 10;
+        valign: center;
+
+        layout {
+          column: '0';
+          row: '0';
+        }
+      }
+
+      CheckButton check_rol_2 {
+        label: 'Pago';
+        halign: start;
+        margin-end: 10;
+        margin-start: 10;
+        valign: center;
+
+        layout {
+          column: '0';
+          row: '1';
+        }
+      }
+
+      CheckButton check_rol_3 {
+        label: 'Carga';
+        halign: start;
+        margin-end: 10;
+        margin-start: 10;
+        valign: center;
+
+        layout {
+          column: '0';
+          row: '2';
+        }
+      }
+
+      CheckButton check_rol_4 {
+        label: 'Retirada';
+        halign: start;
+        margin-end: 10;
+        margin-start: 10;
+        valign: center;
+
+        layout {
+          column: '0';
+          row: '3';
+        }
+      }
+
+      CheckButton check_rol_5 {
+        label: 'Cambio Manual';
+        halign: start;
+        margin-end: 10;
+        margin-start: 10;
+        valign: center;
+
+        layout {
+          column: '0';
+          row: '4';
+        }
+      }
+
+      CheckButton check_rol_6 {
+        label: 'Cambio Automatico';
+        halign: start;
+        margin-end: 10;
+        margin-start: 10;
+        valign: center;
+
+        layout {
+          column: '0';
+          row: '5';
+        }
+      }
+
+      CheckButton check_rol_7 {
+        label: 'Ingresos';
+        halign: start;
+        margin-end: 10;
+        margin-start: 10;
+        valign: center;
+
+        layout {
+          column: '0';
+          row: '6';
+        }
+      }
+
+      CheckButton check_rol_8 {
+        label: 'Enviar a casette';
+        halign: start;
+        margin-end: 10;
+        margin-start: 10;
+        valign: center;
+
+        layout {
+          column: '1';
+          row: '0';
+        }
+      }
+
+      CheckButton check_rol_9 {
+        label: 'Retirada Casette';
+        halign: start;
+        margin-end: 10;
+        margin-start: 10;
+        valign: center;
+
+        layout {
+          column: '1';
+          row: '1';
+        }
+      }
+
+      CheckButton check_rol_10 {
+        label: 'Consulta de Efectivo';
+        halign: start;
+        margin-end: 10;
+        margin-start: 10;
+        valign: center;
+
+        layout {
+          column: '1';
+          row: '2';
+        }
+      }
+
+      CheckButton check_rol_11 {
+        label: 'Mov. Pendientes';
+        halign: start;
+        margin-end: 10;
+        margin-start: 10;
+        valign: center;
+
+        layout {
+          column: '1';
+          row: '3';
+        }
+      }
+
+      CheckButton check_rol_12 {
+        label: 'Consulta Movimiento';
+        halign: start;
+        margin-end: 10;
+        margin-start: 10;
+        valign: center;
+
+        layout {
+          column: '1';
+          row: '4';
+        }
+      }
+
+      CheckButton check_rol_13 {
+        label: 'Cierre con Faltantes';
+        halign: start;
+        margin-end: 10;
+        margin-start: 10;
+        valign: center;
+
+        layout {
+          column: '1';
+          row: '5';
+        }
+      }
+
+      Separator {
+        layout {
+          column: '0';
+          row: '8';
+          column-span: '2';
+        }
+      }
+
+      CheckButton check_rol_14 {
+        label: 'Estadisticas';
+        halign: start;
+        margin-end: 10;
+        margin-start: 10;
+        valign: center;
+
+        layout {
+          column: '0';
+          row: '9';
+        }
+      }
+
+      CheckButton check_rol_15 {
+        label: 'Fianza';
+        halign: start;
+        margin-end: 10;
+        margin-start: 10;
+        valign: center;
+
+        layout {
+          column: '0';
+          row: '10';
+        }
+      }
+
+      CheckButton check_rol_16 {
+        label: 'Mostrar Reportes';
+        halign: start;
+        margin-end: 10;
+        margin-start: 10;
+        valign: center;
+
+        layout {
+          column: '0';
+          row: '11';
+        }
+      }
+
+      CheckButton check_rol_17 {
+        label: 'Configuracion';
+        halign: start;
+        margin-end: 10;
+        margin-start: 10;
+        valign: center;
+
+        layout {
+          column: '1';
+          row: '9';
+        }
+      }
+
+      CheckButton check_rol_18 {
+        label: 'Salir a Windows';
+        halign: start;
+        margin-end: 10;
+        margin-start: 10;
+        valign: center;
+
+        layout {
+          column: '1';
+          row: '10';
+        }
+      }
+
+      CheckButton check_rol_19 {
+        label: 'Apagar el equipo';
+        halign: start;
+        margin-end: 10;
+        margin-start: 10;
+        valign: center;
+
+        layout {
+          column: '1';
+          row: '11';
+        }
+      }
+
+      Button btnGuardarPermisos {
+        label: 'Guardar';
+        margin-top: 50;
+        valign: center;
         halign: center;
-        label: _("The GTK Inspector");
-        // https://gitlab.gnome.org/Teams/documentation/developer-www/-/issues/40
-        uri: "https://blog.gtk.org/2017/04/05/the-gtk-inspector/";
+
+        layout {
+          column: '0';
+          row: '15';
+          column-span: '2';
+        }
+
+        styles [
+          "suggested-action",
+        ]
       }
     }
   }

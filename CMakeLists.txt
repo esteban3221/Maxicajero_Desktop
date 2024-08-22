@@ -30,7 +30,7 @@ set(SOURCES
     src/controller/menu/menu.cpp
 
 
-    #=============================
+    #============== MENU ================
     src/view/component/nip.cpp
     src/view/component/tres_filas.cpp
 
@@ -45,6 +45,25 @@ set(SOURCES
     src/controller/menu/venta.cpp
     src/controller/menu/cambio_manual.cpp
 
+
+    #============== CONFIG ================
+    src/view/menu/config/notepadACCESS.cpp
+
+    src/view/menu/config/datos_empresa.cpp
+    src/controller/menu/config/datos_empresa.cpp
+    
+    src/view/menu/config/general.cpp
+    src/controller/menu/config/general.cpp
+
+    src/view/menu/config/impresoras.cpp
+    src/controller/menu/config/impresoras.cpp
+
+    src/view/menu/config/informacion_sistema.cpp
+    src/controller/menu/config/informacion_sistema.cpp
+
+    src/view/menu/config/usuarios.cpp
+    src/controller/menu/config/usuarios.cpp
+
 )
 
 include_directories(include
@@ -54,9 +73,11 @@ include_directories(include
                     include/shared/
                     include/db/
                     include/view/menu
+                    include/view/menu/config
                     include/view/component
                     include/model/menu
                     include/controller/menu
+                    include/controller/menu/config
                     )
 
 
