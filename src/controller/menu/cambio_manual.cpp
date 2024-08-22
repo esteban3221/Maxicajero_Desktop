@@ -19,7 +19,7 @@ inline void ControllerCambioManual::onBtnEnterActivated()
     }
 
     nlohmann::json jsonData;
-    jsonData["value"] = std::stoll(nip.entry->get_text());
+    jsonData["value"] = std::stoll(nip.entry->get_text()) * 100;
     std::string jsonString = jsonData.dump();
 
     auto fr = cpr::PostAsync(cpr::Url{"http://" + Global::Var::ipDirection + ":44333/accion/cambioM"},

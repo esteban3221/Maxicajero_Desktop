@@ -11,7 +11,7 @@ inline void ControllerVenta::onBtnEnterActivated()
     }
 
     nlohmann::json jsonData;
-    jsonData["value"] = std::stoll(nip.entry->get_text());
+    jsonData["value"] = std::stoll(nip.entry->get_text()) * 100;
     std::string jsonString = jsonData.dump();
 
     auto fr = cpr::PostAsync(cpr::Url{"http://" + Global::Var::ipDirection + ":44333/accion/pago"},
@@ -24,7 +24,7 @@ inline void ControllerVenta::onBtnEnterActivated()
 
     nip.btnNipEnter->set_sensitive(false);
 
-    Glib::signal_timeout().connect([this,cpy]() mutable -> bool
+    Glib::signal_timeout().connect([this, cpy]() mutable -> bool
                                    {
                                        Global::Widget::progress->pulse(); 
                                        Global::Widget::listBoxMenu->set_sensitive(false);
@@ -36,16 +36,22 @@ inline void ControllerVenta::onBtnEnterActivated()
                                            Global::Widget::infobar->set_revealed();
 
                                            if (r.status_code == 200)
+                                           {
                                                Global::Widget::infobar->set_message_type(Gtk::MessageType::INFO);
+                                               tresfilas.etyColum1->set_text("0");
+                                                tresfilas.etyColum2->set_text("0");
+                                                tresfilas.etyColum3->set_text(nip.entry->get_text());
+                                           }
                                            else
+                                           {
                                                Global::Widget::infobar->set_message_type(Gtk::MessageType::ERROR);
+                                           }
                                            
                                            Global::Widget::progress->set_fraction(1.0); 
-                                           //Global::Widget::btnCerrarSesion->activate();
+
                                            return false;
                                        }
-                                       return true;
-                                   }, 100);
+                                       return true; }, 100);
 }
 
 ControllerVenta::ControllerVenta(/* args */)
