@@ -140,6 +140,15 @@ ViewDatosEmpresa::ViewDatosEmpresa(/* args */) : XML("<?xml version=\"1.0\" enco
     auto builder = Gtk::Builder::create_from_string(XML);
 
     boxDatosEmpresa = builder->get_widget<Gtk::Box>("boxDatosEmpresa");
+
+    data[0] = builder->get_widget<Gtk::Entry>("ety_conf_razon");
+    data[1] = builder->get_widget<Gtk::Entry>("ety_conf_direccion");
+    data[2] = builder->get_widget<Gtk::Entry>("ety_conf_rfc");
+    data[3] = builder->get_widget<Gtk::Entry>("ety_conf_contacto");
+    data[4] = builder->get_widget<Gtk::Entry>("ety_conf_thanks");
+
+    btnGuardar = builder->get_widget<Gtk::Button>("btnGuardar");
+
     set_margin(10);
     set_homogeneous();
     this->append(*boxDatosEmpresa);
