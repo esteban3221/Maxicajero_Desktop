@@ -1,7 +1,8 @@
 using Gtk 4.0;
 
-Box page_1 {
+Box infSistemas {
   orientation: vertical;
+  spacing: 20;
 
   ListBox list_info_systema {
     ListBoxRow {
@@ -110,6 +111,49 @@ Box page_1 {
           styles [
             "dim-label",
           ]
+        }
+      }
+    }
+
+    styles [
+      "rich-list",
+      "boxed-list",
+    ]
+  }
+
+  ListBox listAcciones {
+    ListBoxRow {
+      Box {
+        Label {
+          halign: start;
+          hexpand: true;
+          label: 'Reiniciar';
+          valign: center;
+          xalign: 0;
+        }
+
+        Image {
+          halign: end;
+          icon-name: 'system-reboot-symbolic';
+          margin-end: 10;
+        }
+      }
+    }
+
+    ListBoxRow {
+      Box {
+        Label {
+          halign: start;
+          hexpand: true;
+          label: 'Apagar';
+          valign: center;
+          xalign: 0;
+        }
+
+        Image {
+          halign: end;
+          icon-name: 'system-shutdown-symbolic';
+          margin-end: 10;
         }
       }
     }

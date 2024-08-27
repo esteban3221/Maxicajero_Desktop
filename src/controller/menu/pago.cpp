@@ -64,9 +64,8 @@ void ControllerPago::onBtnEnterActivated()
                                            }
                                            else
                                            {
-                                            auto json_data = nlohmann::json::parse(r.text);
                                                Global::Widget::infobar->set_message_type(Gtk::MessageType::ERROR);
-                                               Global::Widget::lblinfobar->set_text(json_data["status"].get<std::string>());
+                                               Global::Widget::lblinfobar->set_text(r.text);
                                            }
                                            
                                            Global::Widget::progress->set_fraction(1.0); 

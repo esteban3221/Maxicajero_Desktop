@@ -138,6 +138,7 @@ ViewGeneral::ViewGeneral() : XML("<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
 {
     auto builder = Gtk::Builder::create_from_string(XML);
     boxConfGeneral = builder->get_widget<Gtk::Box>("boxConfGeneral");
+    set_margin(10);
 
     append(*boxConfGeneral);
 }

@@ -9,5 +9,5 @@ show-console=true
 maximized=true
 width=1440
 height=780
-user-interface-language='blueprint'
+user-interface-language='xml'
 edited=true

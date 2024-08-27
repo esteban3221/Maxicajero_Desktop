@@ -12,10 +12,7 @@
             <property name="vexpand">true</property>
             <property name="vexpand-set">true</property>
             <child>
-              <object class="GtkTreeView" id="tree_usuarios">
-                <property name="enable-grid-lines">2</property>
-                <property name="enable-search">false</property>
-              </object>
+              <object class="GtkColumnView" id="tree_usuarios"></object>
             </child>
           </object>
         </child>

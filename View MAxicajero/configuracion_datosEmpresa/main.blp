@@ -1,6 +1,6 @@
 using Gtk 4.0;
 
-Box page_2 {
+Box boxDatosEmpresa {
   orientation: vertical;
 
   ListBox list_config_datos {
@@ -96,11 +96,14 @@ Box page_2 {
       "boxed-list",
     ]
   }
-  
-  Button btnGuardar{
-    label : 'Guardar';
-    margin-top : 10;
+
+  Button btnGuardar {
+    label: 'Guardar';
+    margin-top: 10;
     halign: end;
-    styles[ "suggested-action"]
+
+    styles [
+      "suggested-action",
+    ]
   }
 }
