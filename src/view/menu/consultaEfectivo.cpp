@@ -274,21 +274,21 @@ ViewEfectivo::ViewEfectivo() : XML("<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
     auto builder = Gtk::Builder::create_from_string(XML);
     this->boxVistaEfectivo = builder->get_widget<Gtk::Box>("boxVistaEfectivo");
 
-    // this->colViewRecicladorBilletes = builder->get_widget<Gtk::ColumnView>("colViewRecicladorBilletes");
-    // this->colViewRecicladorMonedas = builder->get_widget<Gtk::ColumnView>("colViewRecicladorMonedas");
+    this->colViewRecicladorBilletes = builder->get_widget<Gtk::ColumnView>("colViewRecicladorBilletes");
+    this->colViewRecicladorMonedas = builder->get_widget<Gtk::ColumnView>("colViewRecicladorMonedas");
 
-    // this->lblTotalMXN1 = builder->get_widget<Gtk::Label>("lblTotalMXN1");
-    // this->lblTotalMXN2 = builder->get_widget<Gtk::Label>("lblTotalMXN2");
-    // this->lblTotalMXN3 = builder->get_widget<Gtk::Label>("lblTotalMXN3");
-    // this->lblTotalMXN4 = builder->get_widget<Gtk::Label>("lblTotalMXN4");
-    // this->lblTotalMXN5 = builder->get_widget<Gtk::Label>("lblTotalMXN5");
+    this->lblTotalMXN1 = builder->get_widget<Gtk::Label>("lblTotalMXN1");
+    this->lblTotalMXN2 = builder->get_widget<Gtk::Label>("lblTotalMXN2");
+    this->lblTotalMXN3 = builder->get_widget<Gtk::Label>("lblTotalMXN3");
+    this->lblTotalMXN4 = builder->get_widget<Gtk::Label>("lblTotalMXN4");
+    this->lblTotalMXN5 = builder->get_widget<Gtk::Label>("lblTotalMXN5");
 
-    // this->lblTotalNum1 = builder->get_widget<Gtk::Label>("lblTotalNum1");
-    // this->lblTotalNum2 = builder->get_widget<Gtk::Label>("lblTotalNum2");
+    this->lblTotalNum1 = builder->get_widget<Gtk::Label>("lblTotalNum1");
+    this->lblTotalNum2 = builder->get_widget<Gtk::Label>("lblTotalNum2");
 
-    // this->lblTotalCasette = builder->get_widget<Gtk::Label>("lblTotalCasette");
+    this->lblTotalCasette = builder->get_widget<Gtk::Label>("lblTotalCasette");
 
-    // this->boxVistaEfectivo->set_margin(10);
+    this->boxVistaEfectivo->set_margin(10);
     this->append(*boxVistaEfectivo);
 }
 
