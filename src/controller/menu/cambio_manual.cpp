@@ -1,5 +1,7 @@
 #include "controller/menu/cambio_manual.hpp"
-
+#ifdef ERROR
+#undef ERROR
+#endif
 ControllerCambioManual::ControllerCambioManual(/* args */)
 {
 }

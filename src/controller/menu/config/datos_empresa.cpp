@@ -1,6 +1,8 @@
 #include "controller/menu/config/datos_empresa.hpp"
 #include "datos_empresa.hpp"
-
+#ifdef ERROR
+#undef ERROR
+#endif
 ControllerDatosEmpresa::ControllerDatosEmpresa(/* args */) 
 {
     this->signal_map().connect(sigc::mem_fun(*this,&ControllerDatosEmpresa::onShowWidget));

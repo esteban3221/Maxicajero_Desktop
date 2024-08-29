@@ -1,5 +1,8 @@
 #include "controller/menu/config/informacion_sistema.hpp"
 #include "informacion_sistema.hpp"
+#ifdef ERROR
+#undef ERROR
+#endif
 
 ControllerInformacionSistema::ControllerInformacionSistema(/* args */)
 {

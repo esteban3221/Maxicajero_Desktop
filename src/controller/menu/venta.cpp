@@ -1,5 +1,7 @@
 #include "controller/menu/venta.hpp"
-
+#ifdef ERROR
+#undef ERROR
+#endif
 inline void ControllerVenta::onBtnEnterActivated()
 {
     if (nip.entry->get_text().empty() || std::stoll(nip.entry->get_text()) < 1)

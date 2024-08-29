@@ -1,4 +1,7 @@
 #include "controller/menu/pago.hpp"
+#ifdef ERROR
+#undef ERROR
+#endif
 
 ControllerPago::ControllerPago(/* args */)
 {
