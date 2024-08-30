@@ -24,6 +24,9 @@ private:
 
     Gtk::Stack *stackMenu = nullptr;
 
+
+    //DECLARAR 
+
 public:
     ViewEfectivo();
     ~ViewEfectivo();

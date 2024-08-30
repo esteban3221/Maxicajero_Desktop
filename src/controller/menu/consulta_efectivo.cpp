@@ -1,4 +1,4 @@
-#include "controller/menu/consultaEfectivo.hpp"
+#include "controller/menu/consulta_efectivo.hpp"
 
 
 ControllerConsultaEfectivo::ControllerConsultaEfectivo(/* args */)

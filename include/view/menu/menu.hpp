@@ -2,7 +2,7 @@
 #include <gtkmm.h>
 #include "global.hpp"
 #include "controller/menu/pago.hpp"
-#include "controller/menu/consultaEfectivo.hpp"
+#include "controller/menu/consulta_efectivo.hpp"
 #include "controller/menu/venta.hpp"
 
 class ViewMenu : public Gtk::Box

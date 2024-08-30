@@ -38,8 +38,8 @@ set(SOURCES
     src/view/component/nip.cpp
     src/view/component/tres_filas.cpp
 
-    src/view/menu/consultaEfectivo.cpp
-    src/controller/menu/consultaEfectivo.cpp    
+    src/view/menu/consulta_efectivo.cpp
+    src/controller/menu/consulta_efectivo.cpp    
 
 )
 

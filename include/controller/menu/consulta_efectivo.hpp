@@ -1,5 +1,5 @@
 #pragma once
-#include "view/menu/consultaEfectivo.hpp"
+#include "view/menu/consulta_efectivo.hpp"
 #include <cpr/cpr.h>
 #include "global.hpp"
 #include <nlohmann/json.hpp>
