@@ -6,6 +6,7 @@ namespace Controller
     Login::Login(/* args */) : urlBase("http://" + Global::Var::ipDirection + ":44333/sesion/")
     {
         ((Gtk::Entry *)etyPassd)->signal_activate().connect(sigc::mem_fun(*this, &Login::onPasswdActivate));
+        circularPlus->signal_clicked().connect(sigc::mem_fun(*this, &Login::onPasswdActivate));
     }
 
     Login::~Login()

@@ -1,5 +1,5 @@
 [re/sonny/Workbench]
-code-language=2
+code-language=0
 name='Platform Tools'
 show-code=false
 show-preview=true
@@ -8,6 +8,6 @@ show-ui=true
 show-console=true
 maximized=true
 width=1440
-height=810
-edited=true
+height=780
 user-interface-language='xml'
+edited=true

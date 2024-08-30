@@ -1,5 +1,5 @@
 [re/sonny/Workbench]
-code-language=2
+code-language=0
 name='Platform Tools'
 show-code=false
 show-preview=true
@@ -7,7 +7,7 @@ show-style=false
 show-ui=true
 show-console=true
 maximized=true
-width=1440
-height=810
+width=1920
+height=1040
 edited=true
-user-interface-language='xml'
+user-interface-language='blueprint'

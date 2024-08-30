@@ -17,7 +17,7 @@
     </child>
     <child>
       <object class="GtkLabel">
-        <property name="label" translatable="true">Visulización</property>
+        <property name="label" translatable="true">Visualización</property>
         <property name="halign">1</property>
         <style>
           <class name="title-4"/>
@@ -30,25 +30,7 @@
     <child>
       <object class="GtkCheckButton" id="checkbox1">
         <property name="active">true</property>
-        <property name="label" translatable="true">Iniciar CashDro.exe miimizado</property>
-      </object>
-    </child>
-    <child>
-      <object class="GtkCheckButton" id="checkbox2">
-        <property name="active">true</property>
-        <property name="label" translatable="true">Visualizar y validar por pantalla cambios no disponibles</property>
-      </object>
-    </child>
-    <child>
-      <object class="GtkCheckButton" id="checkbox3">
-        <property name="active">true</property>
-        <property name="label" translatable="true">Validar por pantalla el inicio de las retiradas de efectivo</property>
-      </object>
-    </child>
-    <child>
-      <object class="GtkCheckButton" id="checkbox4">
-        <property name="active">true</property>
-        <property name="label" translatable="true">Mostrar barra de alertas de efectivo</property>
+        <property name="label" translatable="true">Mostrar notificaciones</property>
       </object>
     </child>
     <child>
@@ -99,15 +81,12 @@
           </object>
         </child>
         <child>
-          <object class="GtkEntry" id="etyLimitePago">
+          <object class="GtkSpinButton" id="etyLimitePago">
             <property name="editable">false</property>
             <layout>
               <property name="row">0</property>
               <property name="column">1</property>
             </layout>
-            <style>
-              <class name="title-4"/>
-            </style>
           </object>
         </child>
         <child>

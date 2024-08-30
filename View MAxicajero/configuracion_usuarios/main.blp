@@ -1,0 +1,333 @@
+using Gtk 4.0;
+
+Box page_4 {
+  spacing: 10;
+
+  Box {
+    orientation: vertical;
+
+    ScrolledWindow {
+      hexpand: true;
+      vexpand: true;
+      vexpand-set: true;
+
+      ColumnView tree_usuarios {
+      }
+    }
+
+    Box {
+      margin-top: 5;
+      margin-start: 5;
+      margin-end: 5;
+      margin-bottom: 5;
+      spacing: 5;
+
+      Button btnAdd {
+        icon-name: 'list-add-symbolic';
+
+        styles [
+          "circular",
+          "suggested-action",
+        ]
+      }
+
+      Button btnEdit {
+        icon-name: 'edit-symbolic';
+
+        styles [
+          "circular",
+          "warning",
+        ]
+      }
+
+      Button btnDel {
+        icon-name: 'list-remove-symbolic';
+
+        styles [
+          "circular",
+          "destructive-action",
+        ]
+      }
+    }
+  }
+
+  Frame {
+    label: 'Permisos';
+
+    Grid {
+      column-homogeneous: true;
+
+      CheckButton check_rol_1 {
+        label: 'Venta';
+        halign: start;
+        margin-end: 10;
+        margin-start: 10;
+        valign: center;
+
+        layout {
+          column: '0';
+          row: '0';
+        }
+      }
+
+      CheckButton check_rol_2 {
+        label: 'Pago';
+        halign: start;
+        margin-end: 10;
+        margin-start: 10;
+        valign: center;
+
+        layout {
+          column: '0';
+          row: '1';
+        }
+      }
+
+      CheckButton check_rol_3 {
+        label: 'Carga';
+        halign: start;
+        margin-end: 10;
+        margin-start: 10;
+        valign: center;
+
+        layout {
+          column: '0';
+          row: '2';
+        }
+      }
+
+      CheckButton check_rol_4 {
+        label: 'Retirada';
+        halign: start;
+        margin-end: 10;
+        margin-start: 10;
+        valign: center;
+
+        layout {
+          column: '0';
+          row: '3';
+        }
+      }
+
+      CheckButton check_rol_5 {
+        label: 'Cambio Manual';
+        halign: start;
+        margin-end: 10;
+        margin-start: 10;
+        valign: center;
+
+        layout {
+          column: '0';
+          row: '4';
+        }
+      }
+
+      CheckButton check_rol_6 {
+        label: 'Cambio Automatico';
+        halign: start;
+        margin-end: 10;
+        margin-start: 10;
+        valign: center;
+
+        layout {
+          column: '0';
+          row: '5';
+        }
+      }
+
+      CheckButton check_rol_7 {
+        label: 'Ingresos';
+        halign: start;
+        margin-end: 10;
+        margin-start: 10;
+        valign: center;
+
+        layout {
+          column: '0';
+          row: '6';
+        }
+      }
+
+      CheckButton check_rol_8 {
+        label: 'Enviar a casette';
+        halign: start;
+        margin-end: 10;
+        margin-start: 10;
+        valign: center;
+
+        layout {
+          column: '1';
+          row: '0';
+        }
+      }
+
+      CheckButton check_rol_9 {
+        label: 'Retirada Casette';
+        halign: start;
+        margin-end: 10;
+        margin-start: 10;
+        valign: center;
+
+        layout {
+          column: '1';
+          row: '1';
+        }
+      }
+
+      CheckButton check_rol_10 {
+        label: 'Consulta de Efectivo';
+        halign: start;
+        margin-end: 10;
+        margin-start: 10;
+        valign: center;
+
+        layout {
+          column: '1';
+          row: '2';
+        }
+      }
+
+      CheckButton check_rol_11 {
+        label: 'Mov. Pendientes';
+        halign: start;
+        margin-end: 10;
+        margin-start: 10;
+        valign: center;
+
+        layout {
+          column: '1';
+          row: '3';
+        }
+      }
+
+      CheckButton check_rol_12 {
+        label: 'Consulta Movimiento';
+        halign: start;
+        margin-end: 10;
+        margin-start: 10;
+        valign: center;
+
+        layout {
+          column: '1';
+          row: '4';
+        }
+      }
+
+      CheckButton check_rol_13 {
+        label: 'Cierre con Faltantes';
+        halign: start;
+        margin-end: 10;
+        margin-start: 10;
+        valign: center;
+
+        layout {
+          column: '1';
+          row: '5';
+        }
+      }
+
+      Separator {
+        layout {
+          column: '0';
+          row: '8';
+          column-span: '2';
+        }
+      }
+
+      CheckButton check_rol_14 {
+        label: 'Estadisticas';
+        halign: start;
+        margin-end: 10;
+        margin-start: 10;
+        valign: center;
+
+        layout {
+          column: '0';
+          row: '9';
+        }
+      }
+
+      CheckButton check_rol_15 {
+        label: 'Fianza';
+        halign: start;
+        margin-end: 10;
+        margin-start: 10;
+        valign: center;
+
+        layout {
+          column: '0';
+          row: '10';
+        }
+      }
+
+      CheckButton check_rol_16 {
+        label: 'Mostrar Reportes';
+        halign: start;
+        margin-end: 10;
+        margin-start: 10;
+        valign: center;
+
+        layout {
+          column: '0';
+          row: '11';
+        }
+      }
+
+      CheckButton check_rol_17 {
+        label: 'Configuracion';
+        halign: start;
+        margin-end: 10;
+        margin-start: 10;
+        valign: center;
+
+        layout {
+          column: '1';
+          row: '9';
+        }
+      }
+
+      CheckButton check_rol_18 {
+        label: 'Salir a Windows';
+        halign: start;
+        margin-end: 10;
+        margin-start: 10;
+        valign: center;
+
+        layout {
+          column: '1';
+          row: '10';
+        }
+      }
+
+      CheckButton check_rol_19 {
+        label: 'Apagar el equipo';
+        halign: start;
+        margin-end: 10;
+        margin-start: 10;
+        valign: center;
+
+        layout {
+          column: '1';
+          row: '11';
+        }
+      }
+
+      Button btnGuardarPermisos {
+        label: 'Guardar';
+        margin-top: 50;
+        valign: center;
+        halign: center;
+
+        layout {
+          column: '0';
+          row: '15';
+          column-span: '2';
+        }
+
+        styles [
+          "suggested-action",
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,109 @@
+using Gtk 4.0;
+
+Box boxDatosEmpresa {
+  orientation: vertical;
+
+  ListBox list_config_datos {
+    selection-mode: none;
+
+    ListBoxRow {
+      activatable: false;
+
+      Box {
+        Label entry_label_7 {
+          xalign: 0;
+          width-request: 110;
+          label: 'Razón social';
+        }
+
+        Entry ety_conf_razon {
+          placeholder-text: 'Type here…';
+          hexpand: true;
+        }
+      }
+    }
+
+    ListBoxRow {
+      activatable: false;
+
+      Box {
+        Label entry_label_3 {
+          xalign: 0;
+          width-request: 110;
+          label: 'Direccion';
+        }
+
+        Entry ety_conf_direccion {
+          placeholder-text: 'Type here…';
+          hexpand: true;
+        }
+      }
+    }
+
+    ListBoxRow {
+      activatable: false;
+
+      Box {
+        Label entry_label {
+          xalign: 0;
+          width-request: 110;
+          label: 'RFC';
+        }
+
+        Entry ety_conf_rfc {
+          placeholder-text: 'Type here…';
+          hexpand: true;
+        }
+      }
+    }
+
+    ListBoxRow {
+      activatable: false;
+
+      Box {
+        Label entry_label_4 {
+          xalign: 0;
+          width-request: 110;
+          label: 'Contacto';
+        }
+
+        Entry ety_conf_contacto {
+          placeholder-text: 'Type here…';
+          hexpand: true;
+        }
+      }
+    }
+
+    ListBoxRow {
+      activatable: false;
+
+      Box {
+        Label entry_label_5 {
+          xalign: 0;
+          width-request: 110;
+          label: 'Agradecimiento';
+        }
+
+        Entry ety_conf_thanks {
+          placeholder-text: 'Type here…';
+          hexpand: true;
+        }
+      }
+    }
+
+    styles [
+      "rich-list",
+      "boxed-list",
+    ]
+  }
+
+  Button btnGuardar {
+    label: 'Guardar';
+    margin-top: 10;
+    halign: end;
+
+    styles [
+      "suggested-action",
+    ]
+  }
+}

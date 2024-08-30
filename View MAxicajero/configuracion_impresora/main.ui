@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <requires lib="gtk" version="4.0"/>
-  <object class="GtkBox" id="boxConfImpresora">
+  <object class="GtkBox" id="boxConfigImpresora">
     <property name="spacing">10</property>
     <property name="homogeneous">true</property>
     <child>
@@ -344,6 +344,9 @@
                 </child>
               </object>
             </child>
+            <style>
+              <class name="tab"/>
+            </style>
           </object>
         </child>
       </object>

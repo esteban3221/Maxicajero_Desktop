@@ -1,9 +1,19 @@
 #include "controller/menu/pago.hpp"
+#ifdef ERROR
+#undef ERROR
+#endif
 
 ControllerPago::ControllerPago(/* args */)
 {
     nip.btnNipEnter->signal_clicked().connect(sigc::mem_fun(*this, &ControllerPago::onBtnEnterActivated));
-    this->signal_map().connect([this](){nip.btnNipEnter->set_sensitive();});
+    this->signal_map().connect([this]()
+    {
+        nip.btnNipEnter->set_sensitive();
+        tresfilas.etyColum1->set_text("");
+        tresfilas.etyColum2->set_text("");
+        tresfilas.etyColum3->set_text("");
+        nip.entry->set_text("");
+    });
 }
 
 ControllerPago::~ControllerPago()
@@ -12,8 +22,9 @@ ControllerPago::~ControllerPago()
 
 void ControllerPago::onBtnEnterActivated()
 {
-    if (nip.entry->get_text().empty())
+    if (nip.entry->get_text().empty() || std::stoll(nip.entry->get_text()) < 1)
     {
+        nip.entry->set_text("");
         Global::Widget::infobar->set_revealed();
         Global::Widget::lblinfobar->set_text("Ingrese el monto.");
         Global::Widget::infobar->set_message_type(Gtk::MessageType::WARNING);
@@ -21,7 +32,7 @@ void ControllerPago::onBtnEnterActivated()
     }
 
     nlohmann::json jsonData;
-    jsonData["value"] = std::stoll(nip.entry->get_text());
+    jsonData["value"] = std::stoll(nip.entry->get_text()) * 100;
     std::string jsonString = jsonData.dump();
 
     auto fr = cpr::PostAsync(cpr::Url{"http://" + Global::Var::ipDirection + ":44333/accion/venta"},
@@ -41,15 +52,24 @@ void ControllerPago::onBtnEnterActivated()
                                        if (cpy.wait_for(std::chrono::milliseconds(0)) == std::future_status::ready)
                                        {
                                            auto r = cpy.get(); 
-
-                                           auto json_data = nlohmann::json::parse(r.text);
-                                           Global::Widget::lblinfobar->set_text(json_data["status"].get<std::string>());
                                            Global::Widget::infobar->set_revealed();
 
                                            if (r.status_code == 200)
-                                               Global::Widget::infobar->set_message_type(Gtk::MessageType::INFO);
+                                           {
+                                            auto json_data = nlohmann::json::parse(r.text);
+
+                                            tresfilas.etyColum1->set_text(json_data["total"].get<std::string>());
+                                            tresfilas.etyColum2->set_text(json_data["recibido"].get<std::string>());
+                                            tresfilas.etyColum3->set_text(json_data["cambio"].get<std::string>());
+                                                
+                                            Global::Widget::infobar->set_message_type(Gtk::MessageType::INFO);
+                                            Global::Widget::lblinfobar->set_text("Operacion realizada exitosamente");
+                                           }
                                            else
+                                           {
                                                Global::Widget::infobar->set_message_type(Gtk::MessageType::ERROR);
+                                               Global::Widget::lblinfobar->set_text(r.text);
+                                           }
                                            
                                            Global::Widget::progress->set_fraction(1.0); 
                                            //Global::Widget::btnCerrarSesion->activate();
