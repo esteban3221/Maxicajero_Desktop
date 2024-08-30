@@ -1,0 +1,574 @@
+using Gtk 4.0;
+
+Box boxPage7 {
+  halign: center;
+  orientation: vertical;
+  spacing: 10;
+  homogeneous: false;
+  margin-bottom: 10;
+  margin-start: 10;
+  margin-end: 10;
+  margin-top: 10;
+
+  Frame {
+    label: 'Billetes';
+
+    Grid {
+      vexpand: false;
+      column-homogeneous: false;
+      column-spacing: 38;
+      row-spacing: 2;
+      halign: fill;
+      margin-bottom: 10;
+      margin-start: 10;
+      margin-end: 10;
+      margin-top: 10;
+
+      styles [
+        "title-2",
+      ]
+
+      Label {
+        label: '#';
+
+        layout {
+          column: '0';
+          row: '0';
+        }
+      }
+
+      Label {
+        label: 'Cantidad Almacenada';
+
+        layout {
+          column: '1';
+          row: '0';
+        }
+      }
+
+      Label {
+        label: 'CantidadReciclador';
+
+        layout {
+          column: '2';
+          row: '0';
+        }
+      }
+
+      Label {
+        label: '$20';
+
+        layout {
+          column: '0';
+          row: '1';
+        }
+
+        styles [
+          "title-4",
+        ]
+      }
+
+      Label {
+        label: '$50';
+
+        layout {
+          column: '0';
+          row: '2';
+        }
+
+        styles [
+          "title-4",
+        ]
+      }
+
+      Label {
+        label: '$100';
+
+        layout {
+          column: '0';
+          row: '3';
+        }
+
+        styles [
+          "title-4",
+        ]
+      }
+
+      Label {
+        label: '$200';
+
+        layout {
+          column: '0';
+          row: '4';
+        }
+
+        styles [
+          "title-4",
+        ]
+      }
+
+      Label {
+        label: '$500';
+
+        layout {
+          column: '0';
+          row: '5';
+        }
+
+        styles [
+          "title-4",
+        ]
+      }
+
+      Label {
+        label: '$1000';
+
+        layout {
+          column: '0';
+          row: '6';
+        }
+
+        styles [
+          "title-4",
+        ]
+      }
+
+      Label {
+        label: 'Total';
+
+        layout {
+          column: '0';
+          row: '7';
+        }
+
+        styles [
+          "title-3",
+        ]
+      }
+
+      Label lbl_bill_recy_0 {
+        label: '0';
+
+        layout {
+          column: '2';
+          row: '1';
+        }
+
+        styles [
+          "title-4",
+        ]
+      }
+
+      Label lbl_bill_recy_1 {
+        label: '0';
+
+        layout {
+          column: '2';
+          row: '2';
+        }
+
+        styles [
+          "title-4",
+        ]
+      }
+
+      Label lbl_bill_recy_2 {
+        label: '0';
+
+        layout {
+          column: '2';
+          row: '3';
+        }
+
+        styles [
+          "title-4",
+        ]
+      }
+
+      Label lbl_bill_recy_3 {
+        label: '0';
+
+        layout {
+          column: '2';
+          row: '4';
+        }
+
+        styles [
+          "title-4",
+        ]
+      }
+
+      Label lbl_bill_recy_4 {
+        label: '0';
+
+        layout {
+          column: '2';
+          row: '5';
+        }
+
+        styles [
+          "title-4",
+        ]
+      }
+
+      Label lbl_bill_recy_5 {
+        label: '0';
+
+        layout {
+          column: '2';
+          row: '6';
+        }
+
+        styles [
+          "title-4",
+        ]
+      }
+
+      Label lbl_bill_recy_6 {
+        label: '6';
+
+        layout {
+          column: '2';
+          row: '7';
+        }
+
+        styles [
+          "title-3",
+        ]
+      }
+
+      Label lbl_bill_cant_0 {
+        label: '1';
+
+        layout {
+          column: '1';
+          row: '1';
+        }
+
+        styles [
+          "title-4",
+        ]
+      }
+
+      Label lbl_bill_cant_1 {
+        label: '0';
+
+        layout {
+          column: '1';
+          row: '2';
+        }
+
+        styles [
+          "title-4",
+        ]
+      }
+
+      Label lbl_bill_cant_2 {
+        label: '0';
+
+        layout {
+          column: '1';
+          row: '3';
+        }
+
+        styles [
+          "title-4",
+        ]
+      }
+
+      Label lbl_bill_cant_3 {
+        label: '0';
+
+        layout {
+          column: '1';
+          row: '4';
+        }
+
+        styles [
+          "title-4",
+        ]
+      }
+
+      Label lbl_bill_cant_4 {
+        label: '0';
+
+        layout {
+          column: '1';
+          row: '5';
+        }
+
+        styles [
+          "title-4",
+        ]
+      }
+
+      Label lbl_bill_cant_5 {
+        label: '0';
+
+        layout {
+          column: '1';
+          row: '6';
+        }
+
+        styles [
+          "title-4",
+        ]
+      }
+
+      Label lbl_bill_cant_6 {
+        label: '0';
+
+        layout {
+          column: '1';
+          row: '7';
+        }
+
+        styles [
+          "title-3",
+        ]
+      }
+    }
+  }
+
+  Frame {
+    label: 'Monedas';
+
+    Grid {
+      vexpand: false;
+      column-homogeneous: false;
+      column-spacing: 38;
+      row-spacing: 2;
+      halign: fill;
+      margin-bottom: 10;
+      margin-start: 10;
+      margin-end: 10;
+      margin-top: 10;
+
+      styles [
+        "title-2",
+      ]
+
+      Label {
+        label: '#';
+
+        layout {
+          column: '0';
+          row: '0';
+        }
+      }
+
+      Label {
+        label: 'Cantidad Almacenada';
+
+        layout {
+          column: '1';
+          row: '0';
+        }
+      }
+
+      Label {
+        label: 'CantidadReciclador';
+
+        layout {
+          column: '2';
+          row: '0';
+        }
+      }
+
+      Label {
+        label: '$1';
+
+        layout {
+          column: '0';
+          row: '1';
+        }
+
+        styles [
+          "title-4",
+        ]
+      }
+
+      Label {
+        label: '$2';
+
+        layout {
+          column: '0';
+          row: '2';
+        }
+
+        styles [
+          "title-4",
+        ]
+      }
+
+      Label {
+        label: '$5';
+
+        layout {
+          column: '0';
+          row: '3';
+        }
+
+        styles [
+          "title-4",
+        ]
+      }
+
+      Label {
+        label: '$10';
+
+        layout {
+          column: '0';
+          row: '4';
+        }
+
+        styles [
+          "title-4",
+        ]
+      }
+
+      Label {
+        label: 'Total';
+
+        layout {
+          column: '0';
+          row: '5';
+        }
+
+        styles [
+          "title-3",
+        ]
+      }
+
+      Label lbl_coin_recy_0 {
+        label: '1';
+
+        layout {
+          column: '2';
+          row: '1';
+        }
+
+        styles [
+          "title-4",
+        ]
+      }
+
+      Label lbl_coin_recy_1 {
+        label: '0';
+
+        layout {
+          column: '2';
+          row: '2';
+        }
+
+        styles [
+          "title-4",
+        ]
+      }
+
+      Label lbl_coin_recy_2 {
+        label: '0';
+
+        layout {
+          column: '2';
+          row: '3';
+        }
+
+        styles [
+          "title-4",
+        ]
+      }
+
+      Label lbl_coin_recy_3 {
+        label: '3';
+
+        layout {
+          column: '2';
+          row: '4';
+        }
+
+        styles [
+          "title-4",
+        ]
+      }
+
+      Label lbl_coin_recy_4 {
+        label: '0';
+
+        layout {
+          column: '2';
+          row: '5';
+        }
+
+        styles [
+          "title-3",
+        ]
+      }
+
+      Label lbl_coin_cnt_0 {
+        label: '0';
+
+        layout {
+          column: '1';
+          row: '1';
+        }
+
+        styles [
+          "title-4",
+        ]
+      }
+
+      Label lbl_coin_cnt_1 {
+        label: '0';
+
+        layout {
+          column: '1';
+          row: '2';
+        }
+
+        styles [
+          "title-4",
+        ]
+      }
+
+      Label lbl_coin_cnt_2 {
+        label: '0';
+
+        layout {
+          column: '1';
+          row: '3';
+        }
+
+        styles [
+          "title-4",
+        ]
+      }
+
+      Label lbl_coin_cnt_3 {
+        label: '0';
+
+        layout {
+          column: '1';
+          row: '4';
+        }
+
+        styles [
+          "title-4",
+        ]
+      }
+
+      Label lbl_coin_cnt_4 {
+        label: '0';
+
+        layout {
+          column: '1';
+          row: '5';
+        }
+
+        styles [
+          "title-3",
+        ]
+      }
+    }
+  }
+}
