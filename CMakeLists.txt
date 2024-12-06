@@ -34,12 +34,8 @@ set(SOURCES
     src/view/component/nip.cpp
     src/view/component/tres_filas.cpp
 
-<<<<<<< HEAD
     src/view/menu/consulta_efectivo.cpp
-    src/controller/menu/consulta_efectivo.cpp    
-=======
-    src/view/menu/consultaEfectivo.cpp
-    src/controller/menu/consultaEfectivo.cpp   
+    src/controller/menu/consulta_efectivo.cpp   
     
     src/view/menu/consulta_movimientos.cpp
     src/controller/menu/consulta_movimientos.cpp   
@@ -67,7 +63,6 @@ set(SOURCES
 
     src/view/menu/config/usuarios.cpp
     src/controller/menu/config/usuarios.cpp
->>>>>>> 9f5ea737192c2dbc3f059cffdcc1a58ea3ccda9c
 
 )
 
